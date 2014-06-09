@@ -7,6 +7,8 @@
 //
 
 #import "ACAppDelegate.h"
+#import "ACAnnouncementManager.h"
+#define kACAppPreviouslyLaunchedKey                         @"kACAppPreviouslyLaunchedKey"
 
 @implementation ACAppDelegate
 
@@ -16,10 +18,15 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    // Override point for customization after application launch.
-    self.window.backgroundColor = [UIColor whiteColor];
-    [self.window makeKeyAndVisible];
+    if (![[NSUserDefaults standardUserDefaults] boolForKey:kACAppPreviouslyLaunchedKey]) {
+        [[ACAnnouncementManager sharedManager] setTimeAnnouncementEnabled:YES];
+        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:kACAppPreviouslyLaunchedKey];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+    }
+    
+    [[ACAnnouncementManager sharedManager] reloadTimeAnnouncementNotificationsWithCompletion:^(BOOL finished) {
+        [[ACAnnouncementManager sharedManager] scheduleFutureTimeAnnouncementReload];
+    }];
     return YES;
 }
 
@@ -63,6 +70,10 @@
             abort();
         } 
     }
+}
+
+- (void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification {
+    [[ACAnnouncementManager sharedManager] announceDate:notification.fireDate];
 }
 
 #pragma mark - Core Data stack

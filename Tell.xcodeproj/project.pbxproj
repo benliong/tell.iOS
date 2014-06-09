@@ -7,6 +7,134 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		37A6366F1945E59D007F180C /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = 37A6366E1945E59D007F180C /* UIImage+ImageEffects.m */; };
+		37A636701945E59D007F180C /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = 37A6366E1945E59D007F180C /* UIImage+ImageEffects.m */; };
+		DF1589611944978D00BF3AB0 /* UISound.m in Sources */ = {isa = PBXBuildFile; fileRef = DF1589601944978D00BF3AB0 /* UISound.m */; };
+		DF1589621944978D00BF3AB0 /* UISound.m in Sources */ = {isa = PBXBuildFile; fileRef = DF1589601944978D00BF3AB0 /* UISound.m */; };
+		DF1589671944A90100BF3AB0 /* ACLocalNotificationsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF1589661944A90100BF3AB0 /* ACLocalNotificationsViewController.m */; };
+		DF1589681944A90100BF3AB0 /* ACLocalNotificationsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF1589661944A90100BF3AB0 /* ACLocalNotificationsViewController.m */; };
+		DF1589A71944B13000BF3AB0 /* 0000-en-samantha-no-am-pm.aiff in Resources */ = {isa = PBXBuildFile; fileRef = DF15896B1944B13000BF3AB0 /* 0000-en-samantha-no-am-pm.aiff */; };
+		DF1589A81944B13000BF3AB0 /* 0000-en-samantha-no-am-pm.aiff in Resources */ = {isa = PBXBuildFile; fileRef = DF15896B1944B13000BF3AB0 /* 0000-en-samantha-no-am-pm.aiff */; };
+		DF1589A91944B13000BF3AB0 /* 0015-en-samantha-no-am-pm.aiff in Resources */ = {isa = PBXBuildFile; fileRef = DF15896C1944B13000BF3AB0 /* 0015-en-samantha-no-am-pm.aiff */; };
+		DF1589AA1944B13000BF3AB0 /* 0015-en-samantha-no-am-pm.aiff in Resources */ = {isa = PBXBuildFile; fileRef = DF15896C1944B13000BF3AB0 /* 0015-en-samantha-no-am-pm.aiff */; };
+		DF1589AB1944B13000BF3AB0 /* 0030-en-samantha-no-am-pm.aiff in Resources */ = {isa = PBXBuildFile; fileRef = DF15896D1944B13000BF3AB0 /* 0030-en-samantha-no-am-pm.aiff */; };
+		DF1589AC1944B13000BF3AB0 /* 0030-en-samantha-no-am-pm.aiff in Resources */ = {isa = PBXBuildFile; fileRef = DF15896D1944B13000BF3AB0 /* 0030-en-samantha-no-am-pm.aiff */; };
+		DF1589AD1944B13000BF3AB0 /* 0045-en-samantha-no-am-pm.aiff in Resources */ = {isa = PBXBuildFile; fileRef = DF15896E1944B13000BF3AB0 /* 0045-en-samantha-no-am-pm.aiff */; };
+		DF1589AE1944B13000BF3AB0 /* 0045-en-samantha-no-am-pm.aiff in Resources */ = {isa = PBXBuildFile; fileRef = DF15896E1944B13000BF3AB0 /* 0045-en-samantha-no-am-pm.aiff */; };
+		DF1589AF1944B13000BF3AB0 /* 0100-en-samantha-no-am-pm.aiff in Resources */ = {isa = PBXBuildFile; fileRef = DF15896F1944B13000BF3AB0 /* 0100-en-samantha-no-am-pm.aiff */; };
+		DF1589B01944B13000BF3AB0 /* 0100-en-samantha-no-am-pm.aiff in Resources */ = {isa = PBXBuildFile; fileRef = DF15896F1944B13000BF3AB0 /* 0100-en-samantha-no-am-pm.aiff */; };
+		DF1589B11944B13000BF3AB0 /* 0115-en-samantha-no-am-pm.aiff in Resources */ = {isa = PBXBuildFile; fileRef = DF1589701944B13000BF3AB0 /* 0115-en-samantha-no-am-pm.aiff */; };
+		DF1589B21944B13000BF3AB0 /* 0115-en-samantha-no-am-pm.aiff in Resources */ = {isa = PBXBuildFile; fileRef = DF1589701944B13000BF3AB0 /* 0115-en-samantha-no-am-pm.aiff */; };
+		DF1589B31944B13000BF3AB0 /* 0130-en-samantha-no-am-pm.aiff in Resources */ = {isa = PBXBuildFile; fileRef = DF1589711944B13000BF3AB0 /* 0130-en-samantha-no-am-pm.aiff */; };
+		DF1589B41944B13000BF3AB0 /* 0130-en-samantha-no-am-pm.aiff in Resources */ = {isa = PBXBuildFile; fileRef = DF1589711944B13000BF3AB0 /* 0130-en-samantha-no-am-pm.aiff */; };
+		DF1589B51944B13000BF3AB0 /* 0145-en-samantha-no-am-pm.aiff in Resources */ = {isa = PBXBuildFile; fileRef = DF1589721944B13000BF3AB0 /* 0145-en-samantha-no-am-pm.aiff */; };
+		DF1589B61944B13000BF3AB0 /* 0145-en-samantha-no-am-pm.aiff in Resources */ = {isa = PBXBuildFile; fileRef = DF1589721944B13000BF3AB0 /* 0145-en-samantha-no-am-pm.aiff */; };
+		DF1589B71944B13000BF3AB0 /* 0200-en-samantha-no-am-pm.aiff in Resources */ = {isa = PBXBuildFile; fileRef = DF1589731944B13000BF3AB0 /* 0200-en-samantha-no-am-pm.aiff */; };
+		DF1589B81944B13000BF3AB0 /* 0200-en-samantha-no-am-pm.aiff in Resources */ = {isa = PBXBuildFile; fileRef = DF1589731944B13000BF3AB0 /* 0200-en-samantha-no-am-pm.aiff */; };
+		DF1589B91944B13000BF3AB0 /* 0215-en-samantha-no-am-pm.aiff in Resources */ = {isa = PBXBuildFile; fileRef = DF1589741944B13000BF3AB0 /* 0215-en-samantha-no-am-pm.aiff */; };
+		DF1589BA1944B13000BF3AB0 /* 0215-en-samantha-no-am-pm.aiff in Resources */ = {isa = PBXBuildFile; fileRef = DF1589741944B13000BF3AB0 /* 0215-en-samantha-no-am-pm.aiff */; };
+		DF1589BB1944B13000BF3AB0 /* 0230-en-samantha-no-am-pm.aiff in Resources */ = {isa = PBXBuildFile; fileRef = DF1589751944B13000BF3AB0 /* 0230-en-samantha-no-am-pm.aiff */; };
+		DF1589BC1944B13000BF3AB0 /* 0230-en-samantha-no-am-pm.aiff in Resources */ = {isa = PBXBuildFile; fileRef = DF1589751944B13000BF3AB0 /* 0230-en-samantha-no-am-pm.aiff */; };
+		DF1589BD1944B13000BF3AB0 /* 0245-en-samantha-no-am-pm.aiff in Resources */ = {isa = PBXBuildFile; fileRef = DF1589761944B13000BF3AB0 /* 0245-en-samantha-no-am-pm.aiff */; };
+		DF1589BE1944B13000BF3AB0 /* 0245-en-samantha-no-am-pm.aiff in Resources */ = {isa = PBXBuildFile; fileRef = DF1589761944B13000BF3AB0 /* 0245-en-samantha-no-am-pm.aiff */; };
+		DF1589BF1944B13000BF3AB0 /* 0300-en-samantha-no-am-pm.aiff in Resources */ = {isa = PBXBuildFile; fileRef = DF1589771944B13000BF3AB0 /* 0300-en-samantha-no-am-pm.aiff */; };
+		DF1589C01944B13000BF3AB0 /* 0300-en-samantha-no-am-pm.aiff in Resources */ = {isa = PBXBuildFile; fileRef = DF1589771944B13000BF3AB0 /* 0300-en-samantha-no-am-pm.aiff */; };
+		DF1589C11944B13000BF3AB0 /* 0315-en-samantha-no-am-pm.aiff in Resources */ = {isa = PBXBuildFile; fileRef = DF1589781944B13000BF3AB0 /* 0315-en-samantha-no-am-pm.aiff */; };
+		DF1589C21944B13000BF3AB0 /* 0315-en-samantha-no-am-pm.aiff in Resources */ = {isa = PBXBuildFile; fileRef = DF1589781944B13000BF3AB0 /* 0315-en-samantha-no-am-pm.aiff */; };
+		DF1589C31944B13000BF3AB0 /* 0330-en-samantha-no-am-pm.aiff in Resources */ = {isa = PBXBuildFile; fileRef = DF1589791944B13000BF3AB0 /* 0330-en-samantha-no-am-pm.aiff */; };
+		DF1589C41944B13000BF3AB0 /* 0330-en-samantha-no-am-pm.aiff in Resources */ = {isa = PBXBuildFile; fileRef = DF1589791944B13000BF3AB0 /* 0330-en-samantha-no-am-pm.aiff */; };
+		DF1589C51944B13000BF3AB0 /* 0345-en-samantha-no-am-pm.aiff in Resources */ = {isa = PBXBuildFile; fileRef = DF15897A1944B13000BF3AB0 /* 0345-en-samantha-no-am-pm.aiff */; };
+		DF1589C61944B13000BF3AB0 /* 0345-en-samantha-no-am-pm.aiff in Resources */ = {isa = PBXBuildFile; fileRef = DF15897A1944B13000BF3AB0 /* 0345-en-samantha-no-am-pm.aiff */; };
+		DF1589C71944B13000BF3AB0 /* 0400-en-samantha-no-am-pm.aiff in Resources */ = {isa = PBXBuildFile; fileRef = DF15897B1944B13000BF3AB0 /* 0400-en-samantha-no-am-pm.aiff */; };
+		DF1589C81944B13000BF3AB0 /* 0400-en-samantha-no-am-pm.aiff in Resources */ = {isa = PBXBuildFile; fileRef = DF15897B1944B13000BF3AB0 /* 0400-en-samantha-no-am-pm.aiff */; };
+		DF1589C91944B13000BF3AB0 /* 0415-en-samantha-no-am-pm.aiff in Resources */ = {isa = PBXBuildFile; fileRef = DF15897C1944B13000BF3AB0 /* 0415-en-samantha-no-am-pm.aiff */; };
+		DF1589CA1944B13000BF3AB0 /* 0415-en-samantha-no-am-pm.aiff in Resources */ = {isa = PBXBuildFile; fileRef = DF15897C1944B13000BF3AB0 /* 0415-en-samantha-no-am-pm.aiff */; };
+		DF1589CB1944B13000BF3AB0 /* 0430-en-samantha-no-am-pm.aiff in Resources */ = {isa = PBXBuildFile; fileRef = DF15897D1944B13000BF3AB0 /* 0430-en-samantha-no-am-pm.aiff */; };
+		DF1589CC1944B13000BF3AB0 /* 0430-en-samantha-no-am-pm.aiff in Resources */ = {isa = PBXBuildFile; fileRef = DF15897D1944B13000BF3AB0 /* 0430-en-samantha-no-am-pm.aiff */; };
+		DF1589CD1944B13000BF3AB0 /* 0445-en-samantha-no-am-pm.aiff in Resources */ = {isa = PBXBuildFile; fileRef = DF15897E1944B13000BF3AB0 /* 0445-en-samantha-no-am-pm.aiff */; };
+		DF1589CE1944B13000BF3AB0 /* 0445-en-samantha-no-am-pm.aiff in Resources */ = {isa = PBXBuildFile; fileRef = DF15897E1944B13000BF3AB0 /* 0445-en-samantha-no-am-pm.aiff */; };
+		DF1589CF1944B13000BF3AB0 /* 0500-en-samantha-no-am-pm.aiff in Resources */ = {isa = PBXBuildFile; fileRef = DF15897F1944B13000BF3AB0 /* 0500-en-samantha-no-am-pm.aiff */; };
+		DF1589D01944B13000BF3AB0 /* 0500-en-samantha-no-am-pm.aiff in Resources */ = {isa = PBXBuildFile; fileRef = DF15897F1944B13000BF3AB0 /* 0500-en-samantha-no-am-pm.aiff */; };
+		DF1589D11944B13000BF3AB0 /* 0515-en-samantha-no-am-pm.aiff in Resources */ = {isa = PBXBuildFile; fileRef = DF1589801944B13000BF3AB0 /* 0515-en-samantha-no-am-pm.aiff */; };
+		DF1589D21944B13000BF3AB0 /* 0515-en-samantha-no-am-pm.aiff in Resources */ = {isa = PBXBuildFile; fileRef = DF1589801944B13000BF3AB0 /* 0515-en-samantha-no-am-pm.aiff */; };
+		DF1589D31944B13000BF3AB0 /* 0530-en-samantha-no-am-pm.aiff in Resources */ = {isa = PBXBuildFile; fileRef = DF1589811944B13000BF3AB0 /* 0530-en-samantha-no-am-pm.aiff */; };
+		DF1589D41944B13000BF3AB0 /* 0530-en-samantha-no-am-pm.aiff in Resources */ = {isa = PBXBuildFile; fileRef = DF1589811944B13000BF3AB0 /* 0530-en-samantha-no-am-pm.aiff */; };
+		DF1589D51944B13000BF3AB0 /* 0545-en-samantha-no-am-pm.aiff in Resources */ = {isa = PBXBuildFile; fileRef = DF1589821944B13000BF3AB0 /* 0545-en-samantha-no-am-pm.aiff */; };
+		DF1589D61944B13000BF3AB0 /* 0545-en-samantha-no-am-pm.aiff in Resources */ = {isa = PBXBuildFile; fileRef = DF1589821944B13000BF3AB0 /* 0545-en-samantha-no-am-pm.aiff */; };
+		DF1589D71944B13000BF3AB0 /* 0600-en-samantha-no-am-pm.aiff in Resources */ = {isa = PBXBuildFile; fileRef = DF1589831944B13000BF3AB0 /* 0600-en-samantha-no-am-pm.aiff */; };
+		DF1589D81944B13000BF3AB0 /* 0600-en-samantha-no-am-pm.aiff in Resources */ = {isa = PBXBuildFile; fileRef = DF1589831944B13000BF3AB0 /* 0600-en-samantha-no-am-pm.aiff */; };
+		DF1589D91944B13000BF3AB0 /* 0615-en-samantha-no-am-pm.aiff in Resources */ = {isa = PBXBuildFile; fileRef = DF1589841944B13000BF3AB0 /* 0615-en-samantha-no-am-pm.aiff */; };
+		DF1589DA1944B13000BF3AB0 /* 0615-en-samantha-no-am-pm.aiff in Resources */ = {isa = PBXBuildFile; fileRef = DF1589841944B13000BF3AB0 /* 0615-en-samantha-no-am-pm.aiff */; };
+		DF1589DB1944B13000BF3AB0 /* 0630-en-samantha-no-am-pm.aiff in Resources */ = {isa = PBXBuildFile; fileRef = DF1589851944B13000BF3AB0 /* 0630-en-samantha-no-am-pm.aiff */; };
+		DF1589DC1944B13000BF3AB0 /* 0630-en-samantha-no-am-pm.aiff in Resources */ = {isa = PBXBuildFile; fileRef = DF1589851944B13000BF3AB0 /* 0630-en-samantha-no-am-pm.aiff */; };
+		DF1589DD1944B13000BF3AB0 /* 0645-en-samantha-no-am-pm.aiff in Resources */ = {isa = PBXBuildFile; fileRef = DF1589861944B13000BF3AB0 /* 0645-en-samantha-no-am-pm.aiff */; };
+		DF1589DE1944B13000BF3AB0 /* 0645-en-samantha-no-am-pm.aiff in Resources */ = {isa = PBXBuildFile; fileRef = DF1589861944B13000BF3AB0 /* 0645-en-samantha-no-am-pm.aiff */; };
+		DF1589DF1944B13000BF3AB0 /* 0700-en-samantha-no-am-pm.aiff in Resources */ = {isa = PBXBuildFile; fileRef = DF1589871944B13000BF3AB0 /* 0700-en-samantha-no-am-pm.aiff */; };
+		DF1589E01944B13000BF3AB0 /* 0700-en-samantha-no-am-pm.aiff in Resources */ = {isa = PBXBuildFile; fileRef = DF1589871944B13000BF3AB0 /* 0700-en-samantha-no-am-pm.aiff */; };
+		DF1589E11944B13000BF3AB0 /* 0715-en-samantha-no-am-pm.aiff in Resources */ = {isa = PBXBuildFile; fileRef = DF1589881944B13000BF3AB0 /* 0715-en-samantha-no-am-pm.aiff */; };
+		DF1589E21944B13000BF3AB0 /* 0715-en-samantha-no-am-pm.aiff in Resources */ = {isa = PBXBuildFile; fileRef = DF1589881944B13000BF3AB0 /* 0715-en-samantha-no-am-pm.aiff */; };
+		DF1589E31944B13000BF3AB0 /* 0730-en-samantha-no-am-pm.aiff in Resources */ = {isa = PBXBuildFile; fileRef = DF1589891944B13000BF3AB0 /* 0730-en-samantha-no-am-pm.aiff */; };
+		DF1589E41944B13000BF3AB0 /* 0730-en-samantha-no-am-pm.aiff in Resources */ = {isa = PBXBuildFile; fileRef = DF1589891944B13000BF3AB0 /* 0730-en-samantha-no-am-pm.aiff */; };
+		DF1589E51944B13000BF3AB0 /* 0745-en-samantha-no-am-pm.aiff in Resources */ = {isa = PBXBuildFile; fileRef = DF15898A1944B13000BF3AB0 /* 0745-en-samantha-no-am-pm.aiff */; };
+		DF1589E61944B13000BF3AB0 /* 0745-en-samantha-no-am-pm.aiff in Resources */ = {isa = PBXBuildFile; fileRef = DF15898A1944B13000BF3AB0 /* 0745-en-samantha-no-am-pm.aiff */; };
+		DF1589E71944B13000BF3AB0 /* 0800-en-samantha-no-am-pm.aiff in Resources */ = {isa = PBXBuildFile; fileRef = DF15898B1944B13000BF3AB0 /* 0800-en-samantha-no-am-pm.aiff */; };
+		DF1589E81944B13000BF3AB0 /* 0800-en-samantha-no-am-pm.aiff in Resources */ = {isa = PBXBuildFile; fileRef = DF15898B1944B13000BF3AB0 /* 0800-en-samantha-no-am-pm.aiff */; };
+		DF1589E91944B13000BF3AB0 /* 0815-en-samantha-no-am-pm.aiff in Resources */ = {isa = PBXBuildFile; fileRef = DF15898C1944B13000BF3AB0 /* 0815-en-samantha-no-am-pm.aiff */; };
+		DF1589EA1944B13000BF3AB0 /* 0815-en-samantha-no-am-pm.aiff in Resources */ = {isa = PBXBuildFile; fileRef = DF15898C1944B13000BF3AB0 /* 0815-en-samantha-no-am-pm.aiff */; };
+		DF1589EB1944B13000BF3AB0 /* 0830-en-samantha-no-am-pm.aiff in Resources */ = {isa = PBXBuildFile; fileRef = DF15898D1944B13000BF3AB0 /* 0830-en-samantha-no-am-pm.aiff */; };
+		DF1589EC1944B13000BF3AB0 /* 0830-en-samantha-no-am-pm.aiff in Resources */ = {isa = PBXBuildFile; fileRef = DF15898D1944B13000BF3AB0 /* 0830-en-samantha-no-am-pm.aiff */; };
+		DF1589ED1944B13000BF3AB0 /* 0845-en-samantha-no-am-pm.aiff in Resources */ = {isa = PBXBuildFile; fileRef = DF15898E1944B13000BF3AB0 /* 0845-en-samantha-no-am-pm.aiff */; };
+		DF1589EE1944B13000BF3AB0 /* 0845-en-samantha-no-am-pm.aiff in Resources */ = {isa = PBXBuildFile; fileRef = DF15898E1944B13000BF3AB0 /* 0845-en-samantha-no-am-pm.aiff */; };
+		DF1589EF1944B13000BF3AB0 /* 0900-en-samantha-no-am-pm.aiff in Resources */ = {isa = PBXBuildFile; fileRef = DF15898F1944B13000BF3AB0 /* 0900-en-samantha-no-am-pm.aiff */; };
+		DF1589F01944B13000BF3AB0 /* 0900-en-samantha-no-am-pm.aiff in Resources */ = {isa = PBXBuildFile; fileRef = DF15898F1944B13000BF3AB0 /* 0900-en-samantha-no-am-pm.aiff */; };
+		DF1589F11944B13000BF3AB0 /* 0915-en-samantha-no-am-pm.aiff in Resources */ = {isa = PBXBuildFile; fileRef = DF1589901944B13000BF3AB0 /* 0915-en-samantha-no-am-pm.aiff */; };
+		DF1589F21944B13000BF3AB0 /* 0915-en-samantha-no-am-pm.aiff in Resources */ = {isa = PBXBuildFile; fileRef = DF1589901944B13000BF3AB0 /* 0915-en-samantha-no-am-pm.aiff */; };
+		DF1589F31944B13000BF3AB0 /* 0930-en-samantha-no-am-pm.aiff in Resources */ = {isa = PBXBuildFile; fileRef = DF1589911944B13000BF3AB0 /* 0930-en-samantha-no-am-pm.aiff */; };
+		DF1589F41944B13000BF3AB0 /* 0930-en-samantha-no-am-pm.aiff in Resources */ = {isa = PBXBuildFile; fileRef = DF1589911944B13000BF3AB0 /* 0930-en-samantha-no-am-pm.aiff */; };
+		DF1589F51944B13000BF3AB0 /* 0945-en-samantha-no-am-pm.aiff in Resources */ = {isa = PBXBuildFile; fileRef = DF1589921944B13000BF3AB0 /* 0945-en-samantha-no-am-pm.aiff */; };
+		DF1589F61944B13000BF3AB0 /* 0945-en-samantha-no-am-pm.aiff in Resources */ = {isa = PBXBuildFile; fileRef = DF1589921944B13000BF3AB0 /* 0945-en-samantha-no-am-pm.aiff */; };
+		DF1589F71944B13000BF3AB0 /* 1000-en-samantha-no-am-pm.aiff in Resources */ = {isa = PBXBuildFile; fileRef = DF1589931944B13000BF3AB0 /* 1000-en-samantha-no-am-pm.aiff */; };
+		DF1589F81944B13000BF3AB0 /* 1000-en-samantha-no-am-pm.aiff in Resources */ = {isa = PBXBuildFile; fileRef = DF1589931944B13000BF3AB0 /* 1000-en-samantha-no-am-pm.aiff */; };
+		DF1589F91944B13000BF3AB0 /* 1015-en-samantha-no-am-pm.aiff in Resources */ = {isa = PBXBuildFile; fileRef = DF1589941944B13000BF3AB0 /* 1015-en-samantha-no-am-pm.aiff */; };
+		DF1589FA1944B13000BF3AB0 /* 1015-en-samantha-no-am-pm.aiff in Resources */ = {isa = PBXBuildFile; fileRef = DF1589941944B13000BF3AB0 /* 1015-en-samantha-no-am-pm.aiff */; };
+		DF1589FB1944B13000BF3AB0 /* 1030-en-samantha-no-am-pm.aiff in Resources */ = {isa = PBXBuildFile; fileRef = DF1589951944B13000BF3AB0 /* 1030-en-samantha-no-am-pm.aiff */; };
+		DF1589FC1944B13000BF3AB0 /* 1030-en-samantha-no-am-pm.aiff in Resources */ = {isa = PBXBuildFile; fileRef = DF1589951944B13000BF3AB0 /* 1030-en-samantha-no-am-pm.aiff */; };
+		DF1589FD1944B13000BF3AB0 /* 1045-en-samantha-no-am-pm.aiff in Resources */ = {isa = PBXBuildFile; fileRef = DF1589961944B13000BF3AB0 /* 1045-en-samantha-no-am-pm.aiff */; };
+		DF1589FE1944B13000BF3AB0 /* 1045-en-samantha-no-am-pm.aiff in Resources */ = {isa = PBXBuildFile; fileRef = DF1589961944B13000BF3AB0 /* 1045-en-samantha-no-am-pm.aiff */; };
+		DF1589FF1944B13000BF3AB0 /* 1100-en-samantha-no-am-pm.aiff in Resources */ = {isa = PBXBuildFile; fileRef = DF1589971944B13000BF3AB0 /* 1100-en-samantha-no-am-pm.aiff */; };
+		DF158A001944B13000BF3AB0 /* 1100-en-samantha-no-am-pm.aiff in Resources */ = {isa = PBXBuildFile; fileRef = DF1589971944B13000BF3AB0 /* 1100-en-samantha-no-am-pm.aiff */; };
+		DF158A011944B13000BF3AB0 /* 1115-en-samantha-no-am-pm.aiff in Resources */ = {isa = PBXBuildFile; fileRef = DF1589981944B13000BF3AB0 /* 1115-en-samantha-no-am-pm.aiff */; };
+		DF158A021944B13000BF3AB0 /* 1115-en-samantha-no-am-pm.aiff in Resources */ = {isa = PBXBuildFile; fileRef = DF1589981944B13000BF3AB0 /* 1115-en-samantha-no-am-pm.aiff */; };
+		DF158A031944B13000BF3AB0 /* 1130-en-samantha-no-am-pm.aiff in Resources */ = {isa = PBXBuildFile; fileRef = DF1589991944B13000BF3AB0 /* 1130-en-samantha-no-am-pm.aiff */; };
+		DF158A041944B13000BF3AB0 /* 1130-en-samantha-no-am-pm.aiff in Resources */ = {isa = PBXBuildFile; fileRef = DF1589991944B13000BF3AB0 /* 1130-en-samantha-no-am-pm.aiff */; };
+		DF158A051944B13100BF3AB0 /* 1145-en-samantha-no-am-pm.aiff in Resources */ = {isa = PBXBuildFile; fileRef = DF15899A1944B13000BF3AB0 /* 1145-en-samantha-no-am-pm.aiff */; };
+		DF158A061944B13100BF3AB0 /* 1145-en-samantha-no-am-pm.aiff in Resources */ = {isa = PBXBuildFile; fileRef = DF15899A1944B13000BF3AB0 /* 1145-en-samantha-no-am-pm.aiff */; };
+		DF158A071944B13100BF3AB0 /* 1200-en-samantha-no-am-pm.aiff in Resources */ = {isa = PBXBuildFile; fileRef = DF15899B1944B13000BF3AB0 /* 1200-en-samantha-no-am-pm.aiff */; };
+		DF158A081944B13100BF3AB0 /* 1200-en-samantha-no-am-pm.aiff in Resources */ = {isa = PBXBuildFile; fileRef = DF15899B1944B13000BF3AB0 /* 1200-en-samantha-no-am-pm.aiff */; };
+		DF158A091944B13100BF3AB0 /* 1300-en-samantha-no-am-pm.aiff in Resources */ = {isa = PBXBuildFile; fileRef = DF15899C1944B13000BF3AB0 /* 1300-en-samantha-no-am-pm.aiff */; };
+		DF158A0A1944B13100BF3AB0 /* 1300-en-samantha-no-am-pm.aiff in Resources */ = {isa = PBXBuildFile; fileRef = DF15899C1944B13000BF3AB0 /* 1300-en-samantha-no-am-pm.aiff */; };
+		DF158A0B1944B13100BF3AB0 /* 1400-en-samantha-no-am-pm.aiff in Resources */ = {isa = PBXBuildFile; fileRef = DF15899D1944B13000BF3AB0 /* 1400-en-samantha-no-am-pm.aiff */; };
+		DF158A0C1944B13100BF3AB0 /* 1400-en-samantha-no-am-pm.aiff in Resources */ = {isa = PBXBuildFile; fileRef = DF15899D1944B13000BF3AB0 /* 1400-en-samantha-no-am-pm.aiff */; };
+		DF158A0D1944B13100BF3AB0 /* 1500-en-samantha-no-am-pm.aiff in Resources */ = {isa = PBXBuildFile; fileRef = DF15899E1944B13000BF3AB0 /* 1500-en-samantha-no-am-pm.aiff */; };
+		DF158A0E1944B13100BF3AB0 /* 1500-en-samantha-no-am-pm.aiff in Resources */ = {isa = PBXBuildFile; fileRef = DF15899E1944B13000BF3AB0 /* 1500-en-samantha-no-am-pm.aiff */; };
+		DF158A0F1944B13100BF3AB0 /* 1600-en-samantha-no-am-pm.aiff in Resources */ = {isa = PBXBuildFile; fileRef = DF15899F1944B13000BF3AB0 /* 1600-en-samantha-no-am-pm.aiff */; };
+		DF158A101944B13100BF3AB0 /* 1600-en-samantha-no-am-pm.aiff in Resources */ = {isa = PBXBuildFile; fileRef = DF15899F1944B13000BF3AB0 /* 1600-en-samantha-no-am-pm.aiff */; };
+		DF158A111944B13100BF3AB0 /* 1700-en-samantha-no-am-pm.aiff in Resources */ = {isa = PBXBuildFile; fileRef = DF1589A01944B13000BF3AB0 /* 1700-en-samantha-no-am-pm.aiff */; };
+		DF158A121944B13100BF3AB0 /* 1700-en-samantha-no-am-pm.aiff in Resources */ = {isa = PBXBuildFile; fileRef = DF1589A01944B13000BF3AB0 /* 1700-en-samantha-no-am-pm.aiff */; };
+		DF158A131944B13100BF3AB0 /* 1800-en-samantha-no-am-pm.aiff in Resources */ = {isa = PBXBuildFile; fileRef = DF1589A11944B13000BF3AB0 /* 1800-en-samantha-no-am-pm.aiff */; };
+		DF158A141944B13100BF3AB0 /* 1800-en-samantha-no-am-pm.aiff in Resources */ = {isa = PBXBuildFile; fileRef = DF1589A11944B13000BF3AB0 /* 1800-en-samantha-no-am-pm.aiff */; };
+		DF158A151944B13100BF3AB0 /* 1900-en-samantha-no-am-pm.aiff in Resources */ = {isa = PBXBuildFile; fileRef = DF1589A21944B13000BF3AB0 /* 1900-en-samantha-no-am-pm.aiff */; };
+		DF158A161944B13100BF3AB0 /* 1900-en-samantha-no-am-pm.aiff in Resources */ = {isa = PBXBuildFile; fileRef = DF1589A21944B13000BF3AB0 /* 1900-en-samantha-no-am-pm.aiff */; };
+		DF158A171944B13100BF3AB0 /* 2000-en-samantha-no-am-pm.aiff in Resources */ = {isa = PBXBuildFile; fileRef = DF1589A31944B13000BF3AB0 /* 2000-en-samantha-no-am-pm.aiff */; };
+		DF158A181944B13100BF3AB0 /* 2000-en-samantha-no-am-pm.aiff in Resources */ = {isa = PBXBuildFile; fileRef = DF1589A31944B13000BF3AB0 /* 2000-en-samantha-no-am-pm.aiff */; };
+		DF158A191944B13100BF3AB0 /* 2100-en-samantha-no-am-pm.aiff in Resources */ = {isa = PBXBuildFile; fileRef = DF1589A41944B13000BF3AB0 /* 2100-en-samantha-no-am-pm.aiff */; };
+		DF158A1A1944B13100BF3AB0 /* 2100-en-samantha-no-am-pm.aiff in Resources */ = {isa = PBXBuildFile; fileRef = DF1589A41944B13000BF3AB0 /* 2100-en-samantha-no-am-pm.aiff */; };
+		DF158A1B1944B13100BF3AB0 /* 2200-en-samantha-no-am-pm.aiff in Resources */ = {isa = PBXBuildFile; fileRef = DF1589A51944B13000BF3AB0 /* 2200-en-samantha-no-am-pm.aiff */; };
+		DF158A1C1944B13100BF3AB0 /* 2200-en-samantha-no-am-pm.aiff in Resources */ = {isa = PBXBuildFile; fileRef = DF1589A51944B13000BF3AB0 /* 2200-en-samantha-no-am-pm.aiff */; };
+		DF158A1D1944B13100BF3AB0 /* 2300-en-samantha-no-am-pm.aiff in Resources */ = {isa = PBXBuildFile; fileRef = DF1589A61944B13000BF3AB0 /* 2300-en-samantha-no-am-pm.aiff */; };
+		DF158A1E1944B13100BF3AB0 /* 2300-en-samantha-no-am-pm.aiff in Resources */ = {isa = PBXBuildFile; fileRef = DF1589A61944B13000BF3AB0 /* 2300-en-samantha-no-am-pm.aiff */; };
+		DF36FC9A19450D7D004F458C /* ACSwitchTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DF36FC9919450D7D004F458C /* ACSwitchTableViewCell.m */; };
+		DF36FC9B19450D7D004F458C /* ACSwitchTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DF36FC9919450D7D004F458C /* ACSwitchTableViewCell.m */; };
 		DF3D48941944843A00B7D15B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF3D48931944843A00B7D15B /* Foundation.framework */; };
 		DF3D48961944843A00B7D15B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF3D48951944843A00B7D15B /* CoreGraphics.framework */; };
 		DF3D48981944843A00B7D15B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF3D48971944843A00B7D15B /* UIKit.framework */; };
@@ -22,6 +150,25 @@
 		DF3D48B51944843B00B7D15B /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF3D48991944843A00B7D15B /* CoreData.framework */; };
 		DF3D48BD1944843B00B7D15B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DF3D48BB1944843B00B7D15B /* InfoPlist.strings */; };
 		DF3D48BF1944843B00B7D15B /* TellTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DF3D48BE1944843B00B7D15B /* TellTests.m */; };
+		DF9EFD401944FD650006CA0D /* ACClockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF9EFD3F1944FD650006CA0D /* ACClockViewController.m */; };
+		DF9EFD411944FD650006CA0D /* ACClockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF9EFD3F1944FD650006CA0D /* ACClockViewController.m */; };
+		DF9EFD44194501CA0006CA0D /* NSTimer+Blocks.m in Sources */ = {isa = PBXBuildFile; fileRef = DF9EFD43194501CA0006CA0D /* NSTimer+Blocks.m */; };
+		DF9EFD45194501CA0006CA0D /* NSTimer+Blocks.m in Sources */ = {isa = PBXBuildFile; fileRef = DF9EFD43194501CA0006CA0D /* NSTimer+Blocks.m */; };
+		DFA79BF01945F1EF00171F6A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DF3D48A11944843A00B7D15B /* main.m */; };
+		DFA79BF41945FD2700171F6A /* UIImageView+Crossfade.m in Sources */ = {isa = PBXBuildFile; fileRef = DFA79BF31945FD2700171F6A /* UIImageView+Crossfade.m */; };
+		DFA79BF51945FD2700171F6A /* UIImageView+Crossfade.m in Sources */ = {isa = PBXBuildFile; fileRef = DFA79BF31945FD2700171F6A /* UIImageView+Crossfade.m */; };
+		DFAD6E4A194487B8002DEA7C /* iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFAD6E49194487B8002DEA7C /* iPhone.storyboard */; };
+		DFAD6E4B194487B8002DEA7C /* iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFAD6E49194487B8002DEA7C /* iPhone.storyboard */; };
+		DFAD6E50194495DA002DEA7C /* ACAnnouncementManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DFAD6E4F194495DA002DEA7C /* ACAnnouncementManager.m */; };
+		DFAD6E51194495DA002DEA7C /* ACAnnouncementManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DFAD6E4F194495DA002DEA7C /* ACAnnouncementManager.m */; };
+		DFBCCE651944F4CB00011B1E /* background-sunrise@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DFBCCE621944F4CB00011B1E /* background-sunrise@2x.jpg */; };
+		DFBCCE661944F4CB00011B1E /* background-sunrise@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DFBCCE621944F4CB00011B1E /* background-sunrise@2x.jpg */; };
+		DFBCCE671944F4CB00011B1E /* background-afternoon@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DFBCCE631944F4CB00011B1E /* background-afternoon@2x.jpg */; };
+		DFBCCE681944F4CB00011B1E /* background-afternoon@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DFBCCE631944F4CB00011B1E /* background-afternoon@2x.jpg */; };
+		DFBCCE691944F4CB00011B1E /* background-night@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DFBCCE641944F4CB00011B1E /* background-night@2x.jpg */; };
+		DFBCCE6A1944F4CB00011B1E /* background-night@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DFBCCE641944F4CB00011B1E /* background-night@2x.jpg */; };
+		DFBCCE721944F84900011B1E /* ACBigClockTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DFBCCE711944F84900011B1E /* ACBigClockTableViewCell.m */; };
+		DFBCCE731944F84900011B1E /* ACBigClockTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DFBCCE711944F84900011B1E /* ACBigClockTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +182,74 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		37A6366D1945E59D007F180C /* UIImage+ImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageEffects.h"; sourceTree = "<group>"; };
+		37A6366E1945E59D007F180C /* UIImage+ImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageEffects.m"; sourceTree = "<group>"; };
+		DF15895F1944978D00BF3AB0 /* UISound.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UISound.h; path = Utilities/UISound/UISound.h; sourceTree = "<group>"; };
+		DF1589601944978D00BF3AB0 /* UISound.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UISound.m; path = Utilities/UISound/UISound.m; sourceTree = "<group>"; };
+		DF1589651944A90100BF3AB0 /* ACLocalNotificationsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ACLocalNotificationsViewController.h; path = ViewControllers/ACLocalNotificationsViewController/ACLocalNotificationsViewController.h; sourceTree = "<group>"; };
+		DF1589661944A90100BF3AB0 /* ACLocalNotificationsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ACLocalNotificationsViewController.m; path = ViewControllers/ACLocalNotificationsViewController/ACLocalNotificationsViewController.m; sourceTree = "<group>"; };
+		DF15896B1944B13000BF3AB0 /* 0000-en-samantha-no-am-pm.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = "0000-en-samantha-no-am-pm.aiff"; sourceTree = "<group>"; };
+		DF15896C1944B13000BF3AB0 /* 0015-en-samantha-no-am-pm.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = "0015-en-samantha-no-am-pm.aiff"; sourceTree = "<group>"; };
+		DF15896D1944B13000BF3AB0 /* 0030-en-samantha-no-am-pm.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = "0030-en-samantha-no-am-pm.aiff"; sourceTree = "<group>"; };
+		DF15896E1944B13000BF3AB0 /* 0045-en-samantha-no-am-pm.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = "0045-en-samantha-no-am-pm.aiff"; sourceTree = "<group>"; };
+		DF15896F1944B13000BF3AB0 /* 0100-en-samantha-no-am-pm.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = "0100-en-samantha-no-am-pm.aiff"; sourceTree = "<group>"; };
+		DF1589701944B13000BF3AB0 /* 0115-en-samantha-no-am-pm.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = "0115-en-samantha-no-am-pm.aiff"; sourceTree = "<group>"; };
+		DF1589711944B13000BF3AB0 /* 0130-en-samantha-no-am-pm.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = "0130-en-samantha-no-am-pm.aiff"; sourceTree = "<group>"; };
+		DF1589721944B13000BF3AB0 /* 0145-en-samantha-no-am-pm.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = "0145-en-samantha-no-am-pm.aiff"; sourceTree = "<group>"; };
+		DF1589731944B13000BF3AB0 /* 0200-en-samantha-no-am-pm.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = "0200-en-samantha-no-am-pm.aiff"; sourceTree = "<group>"; };
+		DF1589741944B13000BF3AB0 /* 0215-en-samantha-no-am-pm.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = "0215-en-samantha-no-am-pm.aiff"; sourceTree = "<group>"; };
+		DF1589751944B13000BF3AB0 /* 0230-en-samantha-no-am-pm.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = "0230-en-samantha-no-am-pm.aiff"; sourceTree = "<group>"; };
+		DF1589761944B13000BF3AB0 /* 0245-en-samantha-no-am-pm.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = "0245-en-samantha-no-am-pm.aiff"; sourceTree = "<group>"; };
+		DF1589771944B13000BF3AB0 /* 0300-en-samantha-no-am-pm.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = "0300-en-samantha-no-am-pm.aiff"; sourceTree = "<group>"; };
+		DF1589781944B13000BF3AB0 /* 0315-en-samantha-no-am-pm.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = "0315-en-samantha-no-am-pm.aiff"; sourceTree = "<group>"; };
+		DF1589791944B13000BF3AB0 /* 0330-en-samantha-no-am-pm.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = "0330-en-samantha-no-am-pm.aiff"; sourceTree = "<group>"; };
+		DF15897A1944B13000BF3AB0 /* 0345-en-samantha-no-am-pm.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = "0345-en-samantha-no-am-pm.aiff"; sourceTree = "<group>"; };
+		DF15897B1944B13000BF3AB0 /* 0400-en-samantha-no-am-pm.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = "0400-en-samantha-no-am-pm.aiff"; sourceTree = "<group>"; };
+		DF15897C1944B13000BF3AB0 /* 0415-en-samantha-no-am-pm.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = "0415-en-samantha-no-am-pm.aiff"; sourceTree = "<group>"; };
+		DF15897D1944B13000BF3AB0 /* 0430-en-samantha-no-am-pm.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = "0430-en-samantha-no-am-pm.aiff"; sourceTree = "<group>"; };
+		DF15897E1944B13000BF3AB0 /* 0445-en-samantha-no-am-pm.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = "0445-en-samantha-no-am-pm.aiff"; sourceTree = "<group>"; };
+		DF15897F1944B13000BF3AB0 /* 0500-en-samantha-no-am-pm.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = "0500-en-samantha-no-am-pm.aiff"; sourceTree = "<group>"; };
+		DF1589801944B13000BF3AB0 /* 0515-en-samantha-no-am-pm.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = "0515-en-samantha-no-am-pm.aiff"; sourceTree = "<group>"; };
+		DF1589811944B13000BF3AB0 /* 0530-en-samantha-no-am-pm.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = "0530-en-samantha-no-am-pm.aiff"; sourceTree = "<group>"; };
+		DF1589821944B13000BF3AB0 /* 0545-en-samantha-no-am-pm.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = "0545-en-samantha-no-am-pm.aiff"; sourceTree = "<group>"; };
+		DF1589831944B13000BF3AB0 /* 0600-en-samantha-no-am-pm.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = "0600-en-samantha-no-am-pm.aiff"; sourceTree = "<group>"; };
+		DF1589841944B13000BF3AB0 /* 0615-en-samantha-no-am-pm.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = "0615-en-samantha-no-am-pm.aiff"; sourceTree = "<group>"; };
+		DF1589851944B13000BF3AB0 /* 0630-en-samantha-no-am-pm.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = "0630-en-samantha-no-am-pm.aiff"; sourceTree = "<group>"; };
+		DF1589861944B13000BF3AB0 /* 0645-en-samantha-no-am-pm.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = "0645-en-samantha-no-am-pm.aiff"; sourceTree = "<group>"; };
+		DF1589871944B13000BF3AB0 /* 0700-en-samantha-no-am-pm.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = "0700-en-samantha-no-am-pm.aiff"; sourceTree = "<group>"; };
+		DF1589881944B13000BF3AB0 /* 0715-en-samantha-no-am-pm.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = "0715-en-samantha-no-am-pm.aiff"; sourceTree = "<group>"; };
+		DF1589891944B13000BF3AB0 /* 0730-en-samantha-no-am-pm.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = "0730-en-samantha-no-am-pm.aiff"; sourceTree = "<group>"; };
+		DF15898A1944B13000BF3AB0 /* 0745-en-samantha-no-am-pm.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = "0745-en-samantha-no-am-pm.aiff"; sourceTree = "<group>"; };
+		DF15898B1944B13000BF3AB0 /* 0800-en-samantha-no-am-pm.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = "0800-en-samantha-no-am-pm.aiff"; sourceTree = "<group>"; };
+		DF15898C1944B13000BF3AB0 /* 0815-en-samantha-no-am-pm.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = "0815-en-samantha-no-am-pm.aiff"; sourceTree = "<group>"; };
+		DF15898D1944B13000BF3AB0 /* 0830-en-samantha-no-am-pm.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = "0830-en-samantha-no-am-pm.aiff"; sourceTree = "<group>"; };
+		DF15898E1944B13000BF3AB0 /* 0845-en-samantha-no-am-pm.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = "0845-en-samantha-no-am-pm.aiff"; sourceTree = "<group>"; };
+		DF15898F1944B13000BF3AB0 /* 0900-en-samantha-no-am-pm.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = "0900-en-samantha-no-am-pm.aiff"; sourceTree = "<group>"; };
+		DF1589901944B13000BF3AB0 /* 0915-en-samantha-no-am-pm.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = "0915-en-samantha-no-am-pm.aiff"; sourceTree = "<group>"; };
+		DF1589911944B13000BF3AB0 /* 0930-en-samantha-no-am-pm.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = "0930-en-samantha-no-am-pm.aiff"; sourceTree = "<group>"; };
+		DF1589921944B13000BF3AB0 /* 0945-en-samantha-no-am-pm.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = "0945-en-samantha-no-am-pm.aiff"; sourceTree = "<group>"; };
+		DF1589931944B13000BF3AB0 /* 1000-en-samantha-no-am-pm.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = "1000-en-samantha-no-am-pm.aiff"; sourceTree = "<group>"; };
+		DF1589941944B13000BF3AB0 /* 1015-en-samantha-no-am-pm.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = "1015-en-samantha-no-am-pm.aiff"; sourceTree = "<group>"; };
+		DF1589951944B13000BF3AB0 /* 1030-en-samantha-no-am-pm.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = "1030-en-samantha-no-am-pm.aiff"; sourceTree = "<group>"; };
+		DF1589961944B13000BF3AB0 /* 1045-en-samantha-no-am-pm.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = "1045-en-samantha-no-am-pm.aiff"; sourceTree = "<group>"; };
+		DF1589971944B13000BF3AB0 /* 1100-en-samantha-no-am-pm.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = "1100-en-samantha-no-am-pm.aiff"; sourceTree = "<group>"; };
+		DF1589981944B13000BF3AB0 /* 1115-en-samantha-no-am-pm.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = "1115-en-samantha-no-am-pm.aiff"; sourceTree = "<group>"; };
+		DF1589991944B13000BF3AB0 /* 1130-en-samantha-no-am-pm.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = "1130-en-samantha-no-am-pm.aiff"; sourceTree = "<group>"; };
+		DF15899A1944B13000BF3AB0 /* 1145-en-samantha-no-am-pm.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = "1145-en-samantha-no-am-pm.aiff"; sourceTree = "<group>"; };
+		DF15899B1944B13000BF3AB0 /* 1200-en-samantha-no-am-pm.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = "1200-en-samantha-no-am-pm.aiff"; sourceTree = "<group>"; };
+		DF15899C1944B13000BF3AB0 /* 1300-en-samantha-no-am-pm.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = "1300-en-samantha-no-am-pm.aiff"; sourceTree = "<group>"; };
+		DF15899D1944B13000BF3AB0 /* 1400-en-samantha-no-am-pm.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = "1400-en-samantha-no-am-pm.aiff"; sourceTree = "<group>"; };
+		DF15899E1944B13000BF3AB0 /* 1500-en-samantha-no-am-pm.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = "1500-en-samantha-no-am-pm.aiff"; sourceTree = "<group>"; };
+		DF15899F1944B13000BF3AB0 /* 1600-en-samantha-no-am-pm.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = "1600-en-samantha-no-am-pm.aiff"; sourceTree = "<group>"; };
+		DF1589A01944B13000BF3AB0 /* 1700-en-samantha-no-am-pm.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = "1700-en-samantha-no-am-pm.aiff"; sourceTree = "<group>"; };
+		DF1589A11944B13000BF3AB0 /* 1800-en-samantha-no-am-pm.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = "1800-en-samantha-no-am-pm.aiff"; sourceTree = "<group>"; };
+		DF1589A21944B13000BF3AB0 /* 1900-en-samantha-no-am-pm.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = "1900-en-samantha-no-am-pm.aiff"; sourceTree = "<group>"; };
+		DF1589A31944B13000BF3AB0 /* 2000-en-samantha-no-am-pm.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = "2000-en-samantha-no-am-pm.aiff"; sourceTree = "<group>"; };
+		DF1589A41944B13000BF3AB0 /* 2100-en-samantha-no-am-pm.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = "2100-en-samantha-no-am-pm.aiff"; sourceTree = "<group>"; };
+		DF1589A51944B13000BF3AB0 /* 2200-en-samantha-no-am-pm.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = "2200-en-samantha-no-am-pm.aiff"; sourceTree = "<group>"; };
+		DF1589A61944B13000BF3AB0 /* 2300-en-samantha-no-am-pm.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = "2300-en-samantha-no-am-pm.aiff"; sourceTree = "<group>"; };
+		DF36FC9819450D7D004F458C /* ACSwitchTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ACSwitchTableViewCell.h; path = CustomCells/ACSwitchTableViewCell/ACSwitchTableViewCell.h; sourceTree = "<group>"; };
+		DF36FC9919450D7D004F458C /* ACSwitchTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ACSwitchTableViewCell.m; path = CustomCells/ACSwitchTableViewCell/ACSwitchTableViewCell.m; sourceTree = "<group>"; };
 		DF3D48901944843A00B7D15B /* Tell.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tell.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF3D48931944843A00B7D15B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		DF3D48951944843A00B7D15B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -53,6 +268,20 @@
 		DF3D48BA1944843B00B7D15B /* TellTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TellTests-Info.plist"; sourceTree = "<group>"; };
 		DF3D48BC1944843B00B7D15B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		DF3D48BE1944843B00B7D15B /* TellTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TellTests.m; sourceTree = "<group>"; };
+		DF9EFD3E1944FD650006CA0D /* ACClockViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ACClockViewController.h; path = ViewControllers/ACClockViewController/ACClockViewController.h; sourceTree = "<group>"; };
+		DF9EFD3F1944FD650006CA0D /* ACClockViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ACClockViewController.m; path = ViewControllers/ACClockViewController/ACClockViewController.m; sourceTree = "<group>"; };
+		DF9EFD42194501CA0006CA0D /* NSTimer+Blocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSTimer+Blocks.h"; path = "Categories/NSTimer (Blocks)/NSTimer+Blocks.h"; sourceTree = "<group>"; };
+		DF9EFD43194501CA0006CA0D /* NSTimer+Blocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSTimer+Blocks.m"; path = "Categories/NSTimer (Blocks)/NSTimer+Blocks.m"; sourceTree = "<group>"; };
+		DFA79BF21945FD2700171F6A /* UIImageView+Crossfade.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+Crossfade.h"; sourceTree = "<group>"; };
+		DFA79BF31945FD2700171F6A /* UIImageView+Crossfade.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+Crossfade.m"; sourceTree = "<group>"; };
+		DFAD6E49194487B8002DEA7C /* iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = iPhone.storyboard; path = Tell/iPhone.storyboard; sourceTree = "<group>"; };
+		DFAD6E4E194495DA002DEA7C /* ACAnnouncementManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ACAnnouncementManager.h; path = Utilities/ACAnnouncementManagement/ACAnnouncementManager.h; sourceTree = "<group>"; };
+		DFAD6E4F194495DA002DEA7C /* ACAnnouncementManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ACAnnouncementManager.m; path = Utilities/ACAnnouncementManagement/ACAnnouncementManager.m; sourceTree = "<group>"; };
+		DFBCCE621944F4CB00011B1E /* background-sunrise@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "background-sunrise@2x.jpg"; sourceTree = "<group>"; };
+		DFBCCE631944F4CB00011B1E /* background-afternoon@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "background-afternoon@2x.jpg"; sourceTree = "<group>"; };
+		DFBCCE641944F4CB00011B1E /* background-night@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "background-night@2x.jpg"; sourceTree = "<group>"; };
+		DFBCCE701944F84900011B1E /* ACBigClockTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ACBigClockTableViewCell.h; path = CustomCells/ACBigClockTableViewCell/ACBigClockTableViewCell.h; sourceTree = "<group>"; };
+		DFBCCE711944F84900011B1E /* ACBigClockTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ACBigClockTableViewCell.m; path = CustomCells/ACBigClockTableViewCell/ACBigClockTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,9 +310,140 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		37A6366C1945E59D007F180C /* UIImage (Image Effects) */ = {
+			isa = PBXGroup;
+			children = (
+				37A6366D1945E59D007F180C /* UIImage+ImageEffects.h */,
+				37A6366E1945E59D007F180C /* UIImage+ImageEffects.m */,
+			);
+			name = "UIImage (Image Effects)";
+			path = "Categories/UIImage (Image Effects)";
+			sourceTree = "<group>";
+		};
+		DF15895E1944972B00BF3AB0 /* UISound */ = {
+			isa = PBXGroup;
+			children = (
+				DF15895F1944978D00BF3AB0 /* UISound.h */,
+				DF1589601944978D00BF3AB0 /* UISound.m */,
+			);
+			name = UISound;
+			sourceTree = "<group>";
+		};
+		DF1589631944A8CB00BF3AB0 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				DF9EFD3D1944FD300006CA0D /* ACClockViewController */,
+				DF1589641944A8D500BF3AB0 /* ACLocalNotificationsViewController */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		DF1589641944A8D500BF3AB0 /* ACLocalNotificationsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				DF1589651944A90100BF3AB0 /* ACLocalNotificationsViewController.h */,
+				DF1589661944A90100BF3AB0 /* ACLocalNotificationsViewController.m */,
+			);
+			name = ACLocalNotificationsViewController;
+			sourceTree = "<group>";
+		};
+		DF1589691944AF1700BF3AB0 /* AudioFiles */ = {
+			isa = PBXGroup;
+			children = (
+				DF158A1F1944EFFF00BF3AB0 /* Numbers */,
+				DF15896A1944B13000BF3AB0 /* en-samantha */,
+			);
+			name = AudioFiles;
+			sourceTree = "<group>";
+		};
+		DF15896A1944B13000BF3AB0 /* en-samantha */ = {
+			isa = PBXGroup;
+			children = (
+				DF15896B1944B13000BF3AB0 /* 0000-en-samantha-no-am-pm.aiff */,
+				DF15896C1944B13000BF3AB0 /* 0015-en-samantha-no-am-pm.aiff */,
+				DF15896D1944B13000BF3AB0 /* 0030-en-samantha-no-am-pm.aiff */,
+				DF15896E1944B13000BF3AB0 /* 0045-en-samantha-no-am-pm.aiff */,
+				DF15896F1944B13000BF3AB0 /* 0100-en-samantha-no-am-pm.aiff */,
+				DF1589701944B13000BF3AB0 /* 0115-en-samantha-no-am-pm.aiff */,
+				DF1589711944B13000BF3AB0 /* 0130-en-samantha-no-am-pm.aiff */,
+				DF1589721944B13000BF3AB0 /* 0145-en-samantha-no-am-pm.aiff */,
+				DF1589731944B13000BF3AB0 /* 0200-en-samantha-no-am-pm.aiff */,
+				DF1589741944B13000BF3AB0 /* 0215-en-samantha-no-am-pm.aiff */,
+				DF1589751944B13000BF3AB0 /* 0230-en-samantha-no-am-pm.aiff */,
+				DF1589761944B13000BF3AB0 /* 0245-en-samantha-no-am-pm.aiff */,
+				DF1589771944B13000BF3AB0 /* 0300-en-samantha-no-am-pm.aiff */,
+				DF1589781944B13000BF3AB0 /* 0315-en-samantha-no-am-pm.aiff */,
+				DF1589791944B13000BF3AB0 /* 0330-en-samantha-no-am-pm.aiff */,
+				DF15897A1944B13000BF3AB0 /* 0345-en-samantha-no-am-pm.aiff */,
+				DF15897B1944B13000BF3AB0 /* 0400-en-samantha-no-am-pm.aiff */,
+				DF15897C1944B13000BF3AB0 /* 0415-en-samantha-no-am-pm.aiff */,
+				DF15897D1944B13000BF3AB0 /* 0430-en-samantha-no-am-pm.aiff */,
+				DF15897E1944B13000BF3AB0 /* 0445-en-samantha-no-am-pm.aiff */,
+				DF15897F1944B13000BF3AB0 /* 0500-en-samantha-no-am-pm.aiff */,
+				DF1589801944B13000BF3AB0 /* 0515-en-samantha-no-am-pm.aiff */,
+				DF1589811944B13000BF3AB0 /* 0530-en-samantha-no-am-pm.aiff */,
+				DF1589821944B13000BF3AB0 /* 0545-en-samantha-no-am-pm.aiff */,
+				DF1589831944B13000BF3AB0 /* 0600-en-samantha-no-am-pm.aiff */,
+				DF1589841944B13000BF3AB0 /* 0615-en-samantha-no-am-pm.aiff */,
+				DF1589851944B13000BF3AB0 /* 0630-en-samantha-no-am-pm.aiff */,
+				DF1589861944B13000BF3AB0 /* 0645-en-samantha-no-am-pm.aiff */,
+				DF1589871944B13000BF3AB0 /* 0700-en-samantha-no-am-pm.aiff */,
+				DF1589881944B13000BF3AB0 /* 0715-en-samantha-no-am-pm.aiff */,
+				DF1589891944B13000BF3AB0 /* 0730-en-samantha-no-am-pm.aiff */,
+				DF15898A1944B13000BF3AB0 /* 0745-en-samantha-no-am-pm.aiff */,
+				DF15898B1944B13000BF3AB0 /* 0800-en-samantha-no-am-pm.aiff */,
+				DF15898C1944B13000BF3AB0 /* 0815-en-samantha-no-am-pm.aiff */,
+				DF15898D1944B13000BF3AB0 /* 0830-en-samantha-no-am-pm.aiff */,
+				DF15898E1944B13000BF3AB0 /* 0845-en-samantha-no-am-pm.aiff */,
+				DF15898F1944B13000BF3AB0 /* 0900-en-samantha-no-am-pm.aiff */,
+				DF1589901944B13000BF3AB0 /* 0915-en-samantha-no-am-pm.aiff */,
+				DF1589911944B13000BF3AB0 /* 0930-en-samantha-no-am-pm.aiff */,
+				DF1589921944B13000BF3AB0 /* 0945-en-samantha-no-am-pm.aiff */,
+				DF1589931944B13000BF3AB0 /* 1000-en-samantha-no-am-pm.aiff */,
+				DF1589941944B13000BF3AB0 /* 1015-en-samantha-no-am-pm.aiff */,
+				DF1589951944B13000BF3AB0 /* 1030-en-samantha-no-am-pm.aiff */,
+				DF1589961944B13000BF3AB0 /* 1045-en-samantha-no-am-pm.aiff */,
+				DF1589971944B13000BF3AB0 /* 1100-en-samantha-no-am-pm.aiff */,
+				DF1589981944B13000BF3AB0 /* 1115-en-samantha-no-am-pm.aiff */,
+				DF1589991944B13000BF3AB0 /* 1130-en-samantha-no-am-pm.aiff */,
+				DF15899A1944B13000BF3AB0 /* 1145-en-samantha-no-am-pm.aiff */,
+				DF15899B1944B13000BF3AB0 /* 1200-en-samantha-no-am-pm.aiff */,
+				DF15899C1944B13000BF3AB0 /* 1300-en-samantha-no-am-pm.aiff */,
+				DF15899D1944B13000BF3AB0 /* 1400-en-samantha-no-am-pm.aiff */,
+				DF15899E1944B13000BF3AB0 /* 1500-en-samantha-no-am-pm.aiff */,
+				DF15899F1944B13000BF3AB0 /* 1600-en-samantha-no-am-pm.aiff */,
+				DF1589A01944B13000BF3AB0 /* 1700-en-samantha-no-am-pm.aiff */,
+				DF1589A11944B13000BF3AB0 /* 1800-en-samantha-no-am-pm.aiff */,
+				DF1589A21944B13000BF3AB0 /* 1900-en-samantha-no-am-pm.aiff */,
+				DF1589A31944B13000BF3AB0 /* 2000-en-samantha-no-am-pm.aiff */,
+				DF1589A41944B13000BF3AB0 /* 2100-en-samantha-no-am-pm.aiff */,
+				DF1589A51944B13000BF3AB0 /* 2200-en-samantha-no-am-pm.aiff */,
+				DF1589A61944B13000BF3AB0 /* 2300-en-samantha-no-am-pm.aiff */,
+			);
+			name = "en-samantha";
+			path = "AudioFiles/en-samantha";
+			sourceTree = "<group>";
+		};
+		DF158A1F1944EFFF00BF3AB0 /* Numbers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Numbers;
+			sourceTree = "<group>";
+		};
+		DF36FC9719450D1D004F458C /* ACSwitchTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				DF36FC9819450D7D004F458C /* ACSwitchTableViewCell.h */,
+				DF36FC9919450D7D004F458C /* ACSwitchTableViewCell.m */,
+			);
+			name = ACSwitchTableViewCell;
+			sourceTree = "<group>";
+		};
 		DF3D48871944843A00B7D15B = {
 			isa = PBXGroup;
 			children = (
+				DFAD6E49194487B8002DEA7C /* iPhone.storyboard */,
 				DF3D489B1944843A00B7D15B /* Tell */,
 				DF3D48B81944843B00B7D15B /* TellTests */,
 				DF3D48921944843A00B7D15B /* Frameworks */,
@@ -115,6 +475,14 @@
 		DF3D489B1944843A00B7D15B /* Tell */ = {
 			isa = PBXGroup;
 			children = (
+				DF9EFD47194501DB0006CA0D /* Categories */,
+				DFBCCE621944F4CB00011B1E /* background-sunrise@2x.jpg */,
+				DFBCCE631944F4CB00011B1E /* background-afternoon@2x.jpg */,
+				DFBCCE641944F4CB00011B1E /* background-night@2x.jpg */,
+				DFBCCE611944F31200011B1E /* Custom Cell */,
+				DF1589691944AF1700BF3AB0 /* AudioFiles */,
+				DF1589631944A8CB00BF3AB0 /* ViewControllers */,
+				DFAD6E4C1944953F002DEA7C /* Utilities */,
 				DF3D48A41944843A00B7D15B /* ACAppDelegate.h */,
 				DF3D48A51944843A00B7D15B /* ACAppDelegate.m */,
 				DF3D48AA1944843A00B7D15B /* Images.xcassets */,
@@ -151,6 +519,80 @@
 				DF3D48BB1944843B00B7D15B /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DF9EFD3D1944FD300006CA0D /* ACClockViewController */ = {
+			isa = PBXGroup;
+			children = (
+				DF9EFD3E1944FD650006CA0D /* ACClockViewController.h */,
+				DF9EFD3F1944FD650006CA0D /* ACClockViewController.m */,
+			);
+			name = ACClockViewController;
+			sourceTree = "<group>";
+		};
+		DF9EFD46194501D00006CA0D /* NSTimer (Blocks) */ = {
+			isa = PBXGroup;
+			children = (
+				DF9EFD42194501CA0006CA0D /* NSTimer+Blocks.h */,
+				DF9EFD43194501CA0006CA0D /* NSTimer+Blocks.m */,
+			);
+			name = "NSTimer (Blocks)";
+			sourceTree = "<group>";
+		};
+		DF9EFD47194501DB0006CA0D /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				DFA79BF11945FD2700171F6A /* UIImageView (Crossfade) */,
+				37A6366C1945E59D007F180C /* UIImage (Image Effects) */,
+				DF9EFD46194501D00006CA0D /* NSTimer (Blocks) */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
+		DFA79BF11945FD2700171F6A /* UIImageView (Crossfade) */ = {
+			isa = PBXGroup;
+			children = (
+				DFA79BF21945FD2700171F6A /* UIImageView+Crossfade.h */,
+				DFA79BF31945FD2700171F6A /* UIImageView+Crossfade.m */,
+			);
+			name = "UIImageView (Crossfade)";
+			path = "Categories/UIImageView (Crossfade)";
+			sourceTree = "<group>";
+		};
+		DFAD6E4C1944953F002DEA7C /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				DF15895E1944972B00BF3AB0 /* UISound */,
+				DFAD6E4D19449549002DEA7C /* ACAnnouncementManager */,
+			);
+			name = Utilities;
+			sourceTree = "<group>";
+		};
+		DFAD6E4D19449549002DEA7C /* ACAnnouncementManager */ = {
+			isa = PBXGroup;
+			children = (
+				DFAD6E4E194495DA002DEA7C /* ACAnnouncementManager.h */,
+				DFAD6E4F194495DA002DEA7C /* ACAnnouncementManager.m */,
+			);
+			name = ACAnnouncementManager;
+			sourceTree = "<group>";
+		};
+		DFBCCE611944F31200011B1E /* Custom Cell */ = {
+			isa = PBXGroup;
+			children = (
+				DF36FC9719450D1D004F458C /* ACSwitchTableViewCell */,
+				DFBCCE6B1944F66400011B1E /* ACBigClockTableViewCell */,
+			);
+			name = "Custom Cell";
+			sourceTree = "<group>";
+		};
+		DFBCCE6B1944F66400011B1E /* ACBigClockTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				DFBCCE701944F84900011B1E /* ACBigClockTableViewCell.h */,
+				DFBCCE711944F84900011B1E /* ACBigClockTableViewCell.m */,
+			);
+			name = ACBigClockTableViewCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -229,8 +671,72 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF1589E51944B13000BF3AB0 /* 0745-en-samantha-no-am-pm.aiff in Resources */,
+				DF1589BD1944B13000BF3AB0 /* 0245-en-samantha-no-am-pm.aiff in Resources */,
+				DF158A0B1944B13100BF3AB0 /* 1400-en-samantha-no-am-pm.aiff in Resources */,
+				DF1589E31944B13000BF3AB0 /* 0730-en-samantha-no-am-pm.aiff in Resources */,
+				DF1589C31944B13000BF3AB0 /* 0330-en-samantha-no-am-pm.aiff in Resources */,
+				DF1589F91944B13000BF3AB0 /* 1015-en-samantha-no-am-pm.aiff in Resources */,
+				DF1589CD1944B13000BF3AB0 /* 0445-en-samantha-no-am-pm.aiff in Resources */,
+				DF1589AB1944B13000BF3AB0 /* 0030-en-samantha-no-am-pm.aiff in Resources */,
+				DFBCCE651944F4CB00011B1E /* background-sunrise@2x.jpg in Resources */,
+				DF1589C91944B13000BF3AB0 /* 0415-en-samantha-no-am-pm.aiff in Resources */,
+				DF158A171944B13100BF3AB0 /* 2000-en-samantha-no-am-pm.aiff in Resources */,
+				DF1589B71944B13000BF3AB0 /* 0200-en-samantha-no-am-pm.aiff in Resources */,
+				DF1589D91944B13000BF3AB0 /* 0615-en-samantha-no-am-pm.aiff in Resources */,
 				DF3D48A01944843A00B7D15B /* InfoPlist.strings in Resources */,
+				DFAD6E4A194487B8002DEA7C /* iPhone.storyboard in Resources */,
+				DF1589E11944B13000BF3AB0 /* 0715-en-samantha-no-am-pm.aiff in Resources */,
+				DF158A011944B13000BF3AB0 /* 1115-en-samantha-no-am-pm.aiff in Resources */,
+				DF1589F71944B13000BF3AB0 /* 1000-en-samantha-no-am-pm.aiff in Resources */,
+				DF1589F51944B13000BF3AB0 /* 0945-en-samantha-no-am-pm.aiff in Resources */,
+				DF1589C11944B13000BF3AB0 /* 0315-en-samantha-no-am-pm.aiff in Resources */,
+				DF1589F31944B13000BF3AB0 /* 0930-en-samantha-no-am-pm.aiff in Resources */,
+				DF1589D71944B13000BF3AB0 /* 0600-en-samantha-no-am-pm.aiff in Resources */,
+				DF1589D31944B13000BF3AB0 /* 0530-en-samantha-no-am-pm.aiff in Resources */,
+				DF1589D11944B13000BF3AB0 /* 0515-en-samantha-no-am-pm.aiff in Resources */,
+				DF1589F11944B13000BF3AB0 /* 0915-en-samantha-no-am-pm.aiff in Resources */,
+				DF1589C71944B13000BF3AB0 /* 0400-en-samantha-no-am-pm.aiff in Resources */,
+				DF1589B31944B13000BF3AB0 /* 0130-en-samantha-no-am-pm.aiff in Resources */,
+				DF1589C51944B13000BF3AB0 /* 0345-en-samantha-no-am-pm.aiff in Resources */,
+				DF158A0F1944B13100BF3AB0 /* 1600-en-samantha-no-am-pm.aiff in Resources */,
+				DF1589E71944B13000BF3AB0 /* 0800-en-samantha-no-am-pm.aiff in Resources */,
+				DF1589EB1944B13000BF3AB0 /* 0830-en-samantha-no-am-pm.aiff in Resources */,
+				DF158A111944B13100BF3AB0 /* 1700-en-samantha-no-am-pm.aiff in Resources */,
 				DF3D48AB1944843A00B7D15B /* Images.xcassets in Resources */,
+				DF158A0D1944B13100BF3AB0 /* 1500-en-samantha-no-am-pm.aiff in Resources */,
+				DF1589D51944B13000BF3AB0 /* 0545-en-samantha-no-am-pm.aiff in Resources */,
+				DF1589DF1944B13000BF3AB0 /* 0700-en-samantha-no-am-pm.aiff in Resources */,
+				DF1589FF1944B13000BF3AB0 /* 1100-en-samantha-no-am-pm.aiff in Resources */,
+				DF158A1D1944B13100BF3AB0 /* 2300-en-samantha-no-am-pm.aiff in Resources */,
+				DF158A051944B13100BF3AB0 /* 1145-en-samantha-no-am-pm.aiff in Resources */,
+				DF1589BB1944B13000BF3AB0 /* 0230-en-samantha-no-am-pm.aiff in Resources */,
+				DF1589FD1944B13000BF3AB0 /* 1045-en-samantha-no-am-pm.aiff in Resources */,
+				DF1589AF1944B13000BF3AB0 /* 0100-en-samantha-no-am-pm.aiff in Resources */,
+				DF1589CB1944B13000BF3AB0 /* 0430-en-samantha-no-am-pm.aiff in Resources */,
+				DF158A191944B13100BF3AB0 /* 2100-en-samantha-no-am-pm.aiff in Resources */,
+				DF158A151944B13100BF3AB0 /* 1900-en-samantha-no-am-pm.aiff in Resources */,
+				DF1589E91944B13000BF3AB0 /* 0815-en-samantha-no-am-pm.aiff in Resources */,
+				DF1589EF1944B13000BF3AB0 /* 0900-en-samantha-no-am-pm.aiff in Resources */,
+				DF1589CF1944B13000BF3AB0 /* 0500-en-samantha-no-am-pm.aiff in Resources */,
+				DF158A031944B13000BF3AB0 /* 1130-en-samantha-no-am-pm.aiff in Resources */,
+				DF158A1B1944B13100BF3AB0 /* 2200-en-samantha-no-am-pm.aiff in Resources */,
+				DF1589A71944B13000BF3AB0 /* 0000-en-samantha-no-am-pm.aiff in Resources */,
+				DF158A091944B13100BF3AB0 /* 1300-en-samantha-no-am-pm.aiff in Resources */,
+				DF1589B91944B13000BF3AB0 /* 0215-en-samantha-no-am-pm.aiff in Resources */,
+				DFBCCE691944F4CB00011B1E /* background-night@2x.jpg in Resources */,
+				DF1589DD1944B13000BF3AB0 /* 0645-en-samantha-no-am-pm.aiff in Resources */,
+				DF158A131944B13100BF3AB0 /* 1800-en-samantha-no-am-pm.aiff in Resources */,
+				DF1589B11944B13000BF3AB0 /* 0115-en-samantha-no-am-pm.aiff in Resources */,
+				DF1589FB1944B13000BF3AB0 /* 1030-en-samantha-no-am-pm.aiff in Resources */,
+				DF1589AD1944B13000BF3AB0 /* 0045-en-samantha-no-am-pm.aiff in Resources */,
+				DF158A071944B13100BF3AB0 /* 1200-en-samantha-no-am-pm.aiff in Resources */,
+				DF1589A91944B13000BF3AB0 /* 0015-en-samantha-no-am-pm.aiff in Resources */,
+				DF1589BF1944B13000BF3AB0 /* 0300-en-samantha-no-am-pm.aiff in Resources */,
+				DFBCCE671944F4CB00011B1E /* background-afternoon@2x.jpg in Resources */,
+				DF1589ED1944B13000BF3AB0 /* 0845-en-samantha-no-am-pm.aiff in Resources */,
+				DF1589DB1944B13000BF3AB0 /* 0630-en-samantha-no-am-pm.aiff in Resources */,
+				DF1589B51944B13000BF3AB0 /* 0145-en-samantha-no-am-pm.aiff in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -238,7 +744,71 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF1589E41944B13000BF3AB0 /* 0730-en-samantha-no-am-pm.aiff in Resources */,
+				DF158A1C1944B13100BF3AB0 /* 2200-en-samantha-no-am-pm.aiff in Resources */,
+				DF1589FC1944B13000BF3AB0 /* 1030-en-samantha-no-am-pm.aiff in Resources */,
+				DF158A041944B13000BF3AB0 /* 1130-en-samantha-no-am-pm.aiff in Resources */,
+				DF1589C01944B13000BF3AB0 /* 0300-en-samantha-no-am-pm.aiff in Resources */,
+				DF158A021944B13000BF3AB0 /* 1115-en-samantha-no-am-pm.aiff in Resources */,
+				DF158A0C1944B13100BF3AB0 /* 1400-en-samantha-no-am-pm.aiff in Resources */,
+				DF158A101944B13100BF3AB0 /* 1600-en-samantha-no-am-pm.aiff in Resources */,
+				DF1589F21944B13000BF3AB0 /* 0915-en-samantha-no-am-pm.aiff in Resources */,
+				DF1589EE1944B13000BF3AB0 /* 0845-en-samantha-no-am-pm.aiff in Resources */,
+				DF158A161944B13100BF3AB0 /* 1900-en-samantha-no-am-pm.aiff in Resources */,
+				DF1589D41944B13000BF3AB0 /* 0530-en-samantha-no-am-pm.aiff in Resources */,
+				DF1589BE1944B13000BF3AB0 /* 0245-en-samantha-no-am-pm.aiff in Resources */,
+				DFBCCE681944F4CB00011B1E /* background-afternoon@2x.jpg in Resources */,
+				DF1589DA1944B13000BF3AB0 /* 0615-en-samantha-no-am-pm.aiff in Resources */,
+				DF158A001944B13000BF3AB0 /* 1100-en-samantha-no-am-pm.aiff in Resources */,
+				DF1589AC1944B13000BF3AB0 /* 0030-en-samantha-no-am-pm.aiff in Resources */,
+				DF1589A81944B13000BF3AB0 /* 0000-en-samantha-no-am-pm.aiff in Resources */,
+				DF1589C21944B13000BF3AB0 /* 0315-en-samantha-no-am-pm.aiff in Resources */,
+				DF1589FA1944B13000BF3AB0 /* 1015-en-samantha-no-am-pm.aiff in Resources */,
+				DF158A0A1944B13100BF3AB0 /* 1300-en-samantha-no-am-pm.aiff in Resources */,
+				DF158A181944B13100BF3AB0 /* 2000-en-samantha-no-am-pm.aiff in Resources */,
+				DF1589B21944B13000BF3AB0 /* 0115-en-samantha-no-am-pm.aiff in Resources */,
+				DF158A121944B13100BF3AB0 /* 1700-en-samantha-no-am-pm.aiff in Resources */,
+				DF1589DE1944B13000BF3AB0 /* 0645-en-samantha-no-am-pm.aiff in Resources */,
+				DF158A0E1944B13100BF3AB0 /* 1500-en-samantha-no-am-pm.aiff in Resources */,
+				DF1589EC1944B13000BF3AB0 /* 0830-en-samantha-no-am-pm.aiff in Resources */,
+				DF158A061944B13100BF3AB0 /* 1145-en-samantha-no-am-pm.aiff in Resources */,
+				DF158A1A1944B13100BF3AB0 /* 2100-en-samantha-no-am-pm.aiff in Resources */,
+				DF1589CC1944B13000BF3AB0 /* 0430-en-samantha-no-am-pm.aiff in Resources */,
+				DF1589E61944B13000BF3AB0 /* 0745-en-samantha-no-am-pm.aiff in Resources */,
+				DF1589DC1944B13000BF3AB0 /* 0630-en-samantha-no-am-pm.aiff in Resources */,
+				DF1589B41944B13000BF3AB0 /* 0130-en-samantha-no-am-pm.aiff in Resources */,
+				DF158A1E1944B13100BF3AB0 /* 2300-en-samantha-no-am-pm.aiff in Resources */,
+				DF1589B01944B13000BF3AB0 /* 0100-en-samantha-no-am-pm.aiff in Resources */,
+				DFBCCE6A1944F4CB00011B1E /* background-night@2x.jpg in Resources */,
+				DF1589B81944B13000BF3AB0 /* 0200-en-samantha-no-am-pm.aiff in Resources */,
+				DF1589D01944B13000BF3AB0 /* 0500-en-samantha-no-am-pm.aiff in Resources */,
+				DF1589EA1944B13000BF3AB0 /* 0815-en-samantha-no-am-pm.aiff in Resources */,
+				DF1589D81944B13000BF3AB0 /* 0600-en-samantha-no-am-pm.aiff in Resources */,
+				DF1589F41944B13000BF3AB0 /* 0930-en-samantha-no-am-pm.aiff in Resources */,
+				DF1589AA1944B13000BF3AB0 /* 0015-en-samantha-no-am-pm.aiff in Resources */,
 				DF3D48BD1944843B00B7D15B /* InfoPlist.strings in Resources */,
+				DF158A081944B13100BF3AB0 /* 1200-en-samantha-no-am-pm.aiff in Resources */,
+				DF1589F81944B13000BF3AB0 /* 1000-en-samantha-no-am-pm.aiff in Resources */,
+				DF1589CE1944B13000BF3AB0 /* 0445-en-samantha-no-am-pm.aiff in Resources */,
+				DF1589D21944B13000BF3AB0 /* 0515-en-samantha-no-am-pm.aiff in Resources */,
+				DF1589F01944B13000BF3AB0 /* 0900-en-samantha-no-am-pm.aiff in Resources */,
+				DF1589B61944B13000BF3AB0 /* 0145-en-samantha-no-am-pm.aiff in Resources */,
+				DF1589C41944B13000BF3AB0 /* 0330-en-samantha-no-am-pm.aiff in Resources */,
+				DF158A141944B13100BF3AB0 /* 1800-en-samantha-no-am-pm.aiff in Resources */,
+				DFBCCE661944F4CB00011B1E /* background-sunrise@2x.jpg in Resources */,
+				DF1589C81944B13000BF3AB0 /* 0400-en-samantha-no-am-pm.aiff in Resources */,
+				DF1589AE1944B13000BF3AB0 /* 0045-en-samantha-no-am-pm.aiff in Resources */,
+				DF1589E21944B13000BF3AB0 /* 0715-en-samantha-no-am-pm.aiff in Resources */,
+				DFAD6E4B194487B8002DEA7C /* iPhone.storyboard in Resources */,
+				DF1589FE1944B13000BF3AB0 /* 1045-en-samantha-no-am-pm.aiff in Resources */,
+				DF1589BC1944B13000BF3AB0 /* 0230-en-samantha-no-am-pm.aiff in Resources */,
+				DF1589F61944B13000BF3AB0 /* 0945-en-samantha-no-am-pm.aiff in Resources */,
+				DF1589CA1944B13000BF3AB0 /* 0415-en-samantha-no-am-pm.aiff in Resources */,
+				DF1589E81944B13000BF3AB0 /* 0800-en-samantha-no-am-pm.aiff in Resources */,
+				DF1589BA1944B13000BF3AB0 /* 0215-en-samantha-no-am-pm.aiff in Resources */,
+				DF1589C61944B13000BF3AB0 /* 0345-en-samantha-no-am-pm.aiff in Resources */,
+				DF1589D61944B13000BF3AB0 /* 0545-en-samantha-no-am-pm.aiff in Resources */,
+				DF1589E01944B13000BF3AB0 /* 0700-en-samantha-no-am-pm.aiff in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,9 +819,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DFAD6E50194495DA002DEA7C /* ACAnnouncementManager.m in Sources */,
+				DF9EFD401944FD650006CA0D /* ACClockViewController.m in Sources */,
 				DF3D48A61944843A00B7D15B /* ACAppDelegate.m in Sources */,
+				DF9EFD44194501CA0006CA0D /* NSTimer+Blocks.m in Sources */,
+				37A6366F1945E59D007F180C /* UIImage+ImageEffects.m in Sources */,
 				DF3D48A91944843A00B7D15B /* Tell.xcdatamodeld in Sources */,
+				DF1589611944978D00BF3AB0 /* UISound.m in Sources */,
+				DFA79BF41945FD2700171F6A /* UIImageView+Crossfade.m in Sources */,
+				DFBCCE721944F84900011B1E /* ACBigClockTableViewCell.m in Sources */,
+				DF36FC9A19450D7D004F458C /* ACSwitchTableViewCell.m in Sources */,
 				DF3D48A21944843A00B7D15B /* main.m in Sources */,
+				DF1589671944A90100BF3AB0 /* ACLocalNotificationsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,7 +838,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DFA79BF01945F1EF00171F6A /* main.m in Sources */,
+				DFAD6E51194495DA002DEA7C /* ACAnnouncementManager.m in Sources */,
 				DF3D48BF1944843B00B7D15B /* TellTests.m in Sources */,
+				DF1589621944978D00BF3AB0 /* UISound.m in Sources */,
+				DFA79BF51945FD2700171F6A /* UIImageView+Crossfade.m in Sources */,
+				DF36FC9B19450D7D004F458C /* ACSwitchTableViewCell.m in Sources */,
+				DF1589681944A90100BF3AB0 /* ACLocalNotificationsViewController.m in Sources */,
+				37A636701945E59D007F180C /* UIImage+ImageEffects.m in Sources */,
+				DFBCCE731944F84900011B1E /* ACBigClockTableViewCell.m in Sources */,
+				DF9EFD411944FD650006CA0D /* ACClockViewController.m in Sources */,
+				DF9EFD45194501CA0006CA0D /* NSTimer+Blocks.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -448,6 +1037,7 @@
 				DF3D48C41944843B00B7D15B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DF3D48C51944843B00B7D15B /* Build configuration list for PBXNativeTarget "TellTests" */ = {
 			isa = XCConfigurationList;
@@ -456,6 +1046,7 @@
 				DF3D48C71944843B00B7D15B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
