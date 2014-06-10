@@ -28,7 +28,13 @@
     // Initialization code
     self.currentTimeLabel.text = [self.dateFormatter stringFromDate:[NSDate date]];
     [NSTimer scheduledTimerWithTimeInterval:1.0f block:^{
-        self.currentTimeLabel.text = [self.dateFormatter stringFromDate:[NSDate date]];
+        NSDate *date = [NSDate date];
+        self.currentTimeLabel.text = [self.dateFormatter stringFromDate:date];
+        if ([[[NSCalendar currentCalendar] components:NSCalendarUnitHour fromDate:date] hour] < 12)
+            self.ampmLabel.text = @"AM";
+        else
+            self.ampmLabel.text = @"PM";
+            
     } repeats:YES];
 }
 

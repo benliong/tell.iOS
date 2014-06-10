@@ -13,6 +13,7 @@
 @interface ACLocalNotificationsViewController ()
 @property (nonatomic, strong) NSArray *notificationsArray;
 - (IBAction)didPressReloadButton:(id)sender;
+- (IBAction)didPressDoneButton:(id)sender;
 @end
 
 @implementation ACLocalNotificationsViewController
@@ -132,4 +133,7 @@
     [self.tableView reloadData];
 }
 
+- (IBAction)didPressDoneButton:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
 @end

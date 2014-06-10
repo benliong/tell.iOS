@@ -22,12 +22,13 @@
 #define kACTimeAnnouncementEnabledKey               @"kACTimeAnnouncementEnabledKey"
 #define kACTimeAnnouncementOptionKey                @"kACTimeAnnouncementOptionKey"
 #define kACTimeANnouncementOptionOldValueKey        @"kACTimeANnouncementOptionOldValueKey"
+#define kACTimeAnnouncementVoiceKey                 @"kACTimeAnnouncementVoiceKey"
 
 #define kACTimeAnnouncementEnabledValueDidChangeNotification @"kACTimeAnnouncementEnabledValueDidChangeNotification"
 #define kACTimeAnnouncementOptionValueDidChangeNotification @"kACTimeAnnouncementOptionValueDidChangeNotification"
 
 typedef enum {
-    kACVoiceFemaleEnglishSamantha
+    kACVoiceFemaleEnglishSamantha = 0
 } ACVoice;
 
 typedef enum {

@@ -12,6 +12,7 @@
 #import "ACAnnouncementManager.h"
 #import "UIImage+ImageEffects.h"
 #import "UIImageView+Crossfade.h"
+#import <FlickrKit/FlickrKit.h>
 
 #define kACTableViewSectionBigClock             0
 #define kACTableViewSectionTimeAnnouncement     1
@@ -24,6 +25,13 @@ CGFloat const kBlurredImageDefaultSaturationDeltaFactor = 1.8;
 @property (nonatomic, assign) IBOutlet UIImageView *backgroundImageView;
 @property (nonatomic, assign) IBOutlet UIImageView *blurredBackgroundImageView;
 @property (nonatomic, assign) IBOutlet UITableView *tableView;
+
+@property (nonatomic, strong) NSArray *dawnImages;
+@property (nonatomic, strong) NSArray *morningImages;
+@property (nonatomic, strong) NSArray *afternoonImages;
+@property (nonatomic, strong) NSArray *eveningImages;
+@property (nonatomic, strong) NSArray *nightImages;
+@property (nonatomic, assign) NSUInteger flickrDownloadCompletionCount;
 @end
 
 @implementation ACClockViewController
@@ -43,6 +51,53 @@ CGFloat const kBlurredImageDefaultSaturationDeltaFactor = 1.8;
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [self setBackgroundWithImage:[UIImage imageNamed:@"background-night.jpg"]];
     });
+  
+    __weak ACClockViewController* sself = self;
+    [self getImageFromFlickrForTags:@"dawn" completion:^(NSArray *photoDictionariesArray, NSError *error) {
+        sself.dawnImages = photoDictionariesArray;
+        dispatch_async(dispatch_get_main_queue(), ^{
+            sself.flickrDownloadCompletionCount++;
+            if (sself.flickrDownloadCompletionCount == 5)
+                [sself reloadBackground];
+        });
+    }];
+    
+    [self getImageFromFlickrForTags:@"morning" completion:^(NSArray *photoDictionariesArray, NSError *error) {
+        sself.morningImages = photoDictionariesArray;
+        dispatch_async(dispatch_get_main_queue(), ^{
+            sself.flickrDownloadCompletionCount++;
+            if (sself.flickrDownloadCompletionCount == 5)
+                [sself reloadBackground];
+        });
+    }];
+    
+    [self getImageFromFlickrForTags:@"afternoon" completion:^(NSArray *photoDictionariesArray, NSError *error) {
+        sself.afternoonImages = photoDictionariesArray;
+        dispatch_async(dispatch_get_main_queue(), ^{
+            sself.flickrDownloadCompletionCount++;
+            if (sself.flickrDownloadCompletionCount == 5)
+                [sself reloadBackground];
+        });
+    }];
+    
+    [self getImageFromFlickrForTags:@"evening" completion:^(NSArray *photoDictionariesArray, NSError *error) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            sself.eveningImages = photoDictionariesArray;
+            sself.flickrDownloadCompletionCount++;
+            if (sself.flickrDownloadCompletionCount == 5)
+                [sself reloadBackground];
+        });
+    }];
+    
+    [self getImageFromFlickrForTags:@"night" completion:^(NSArray *photoDictionariesArray, NSError *error) {
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            sself.nightImages = photoDictionariesArray;
+            sself.flickrDownloadCompletionCount++;
+            if (sself.flickrDownloadCompletionCount == 5)
+                [sself reloadBackground];
+        });
+    }];
 }
 
 - (void)didReceiveMemoryWarning
@@ -75,6 +130,18 @@ CGFloat const kBlurredImageDefaultSaturationDeltaFactor = 1.8;
     NSLog(@"maximumOffset = %f", maximumOffset);
     NSLog(@"contentOffset.y = %f", self.tableView.contentOffset.y);
     NSLog(@"blurFactor = %f", blurFactor);
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    if (indexPath.section == kACTableViewSectionTimeAnnouncement) {
+    TimeAnnouncementOption selectedTimeAnnouncementOption = (TimeAnnouncementOption)(indexPath.row);
+        if ([[ACAnnouncementManager sharedManager] timeAnnouncementOption] != selectedTimeAnnouncementOption) {
+            TimeAnnouncementOption previousTimeAnnouncementOption = [[ACAnnouncementManager sharedManager] timeAnnouncementOption];
+            [[ACAnnouncementManager sharedManager] setTimeAnnouncementOption:selectedTimeAnnouncementOption];
+            [tableView reloadRowsAtIndexPaths:[NSArray arrayWithObjects:[NSIndexPath indexPathForRow:previousTimeAnnouncementOption inSection:kACTableViewSectionTimeAnnouncement], indexPath, nil] withRowAnimation:UITableViewRowAnimationAutomatic];
+        }
+    }
 }
 
 #pragma mark - UITableViewDelegate
@@ -137,7 +204,55 @@ CGFloat const kBlurredImageDefaultSaturationDeltaFactor = 1.8;
     return [[UITableViewCell alloc] init];
 }
 
+#pragma mark - Flickr
+
+- (void)getImageFromFlickrForTags:(NSString *)tags completion:(void (^)(NSArray *photoDictionariesArray, NSError *error))completion {
+    [[FlickrKit sharedFlickrKit] initializeWithAPIKey:@"70333bf54a16ef9eb10727dccdd45599" sharedSecret:@"037c0593985ee59f"];
+    FKFlickrGroupsPoolsGetPhotos *search = [[FKFlickrGroupsPoolsGetPhotos alloc] init];
+    search.group_id = @"1463451@N25";
+    search.tags = tags;
+    search.per_page = @"500";
+    [[FlickrKit sharedFlickrKit] call:search completion:^(NSDictionary *response, NSError *error) {
+        if (!error) {
+            NSArray *photoDictionariesArray = (NSArray *)[response valueForKeyPath:@"photos.photo"];
+            if (completion)
+                completion(photoDictionariesArray, error);
+        } else {
+            NSLog(@"Error = %@", [error localizedDescription]);
+            if (completion)
+                completion(nil, error);
+        }
+    }];
+}
+
 #pragma mark -
+
+- (IBAction)didPressTestButton:(id)sender {
+    NSDateComponents *components = [[NSDateComponents alloc] init];
+    [components setHour:14];
+    [components setMinute:45];
+    NSDate *date = [[NSCalendar currentCalendar] dateFromComponents:components];
+    [[ACAnnouncementManager sharedManager] announceDate:date];
+}
+
+- (void)reloadBackground {
+    __weak ACClockViewController* sself = self;
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
+        NSLog(@"Number of night images = %lu", (unsigned long)[sself.nightImages count]);
+        NSUInteger randomIndex = arc4random() % ([sself.nightImages count] - 1);
+        NSLog(@"Random Integer = %lu", (unsigned long)randomIndex);
+        NSDictionary *randomPhotoDictionary = [sself.nightImages objectAtIndex:randomIndex];
+        NSLog(@"randomPhotoDictionary: %@", randomPhotoDictionary);
+        NSURL *url = [[FlickrKit sharedFlickrKit] photoURLForSize:FKPhotoSizeLarge1024 fromPhotoDictionary:randomPhotoDictionary];
+
+        NSError *error = nil;
+        NSData *data = [NSData dataWithContentsOfURL:url options:NSDataReadingUncached error:&error];
+        if (!error && data) {
+            UIImage* image = [[UIImage alloc] initWithData:data];
+            [sself setBackgroundWithImage:image];
+        }
+    });
+}
 
 - (void)setBackgroundWithImage:(UIImage *)image {
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{

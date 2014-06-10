@@ -58,6 +58,7 @@
         case 45:
         case 00:
         {
+            NSLog(@"Filename = %@", [self audioFileNameForDateComponents:dateComponents voice:self.voice includesExtension:NO]);
             NSString *soundPath = [[NSBundle mainBundle] pathForResource:[self audioFileNameForDateComponents:dateComponents voice:self.voice includesExtension:NO] ofType:@"aiff"];
             UISound *sound = [UISound soundWithContentsOfURL:[NSURL fileURLWithPath:soundPath]];
             [sound alert];
@@ -82,9 +83,12 @@
 }
 
 - (NSString *)audioFileNameForDateComponents:(NSDateComponents *)dateComponents voice:(ACVoice)voice includesExtension:(BOOL)includesExtension {
+    NSInteger hour = [dateComponents hour];
+    if ([dateComponents hour] >= 12 && [dateComponents minute] != 00)
+        hour -= 12;
     if (includesExtension)
-        return [NSString stringWithFormat:@"%02d%02d-%@.aiff", (int)[dateComponents hour], (int)[dateComponents minute], [self.voicePostfixArray objectAtIndex:voice]];
-    return [NSString stringWithFormat:@"%02d%02d-%@", (int)[dateComponents hour], (int)[dateComponents minute], [self.voicePostfixArray objectAtIndex:voice]];
+        return [NSString stringWithFormat:@"%02d%02d-%@.aiff", (int)hour, (int)[dateComponents minute], [self.voicePostfixArray objectAtIndex:voice]];
+    return [NSString stringWithFormat:@"%02d%02d-%@", (int)hour, (int)[dateComponents minute], [self.voicePostfixArray objectAtIndex:voice]];
 }
 
 #pragma mark - Scheduling Local Notifications
@@ -216,6 +220,10 @@
 
 #pragma mark - Custom Getters
 
+- (ACVoice)voice {
+    return (ACVoice)[[NSUserDefaults standardUserDefaults] integerForKey:kACTimeAnnouncementVoiceKey];
+}
+
 - (NSArray *)voicePostfixArray {
 	if (!_voicePostfixArray)
 		_voicePostfixArray = [[NSArray alloc] initWithObjects:@"en-samantha-no-am-pm", nil];
@@ -247,6 +255,17 @@
 }
 
 #pragma mark - Custom Setters
+
+- (void)setVoice:(ACVoice)voice {
+    switch (voice) {
+        case kACVoiceFemaleEnglishSamantha:
+            [[NSUserDefaults standardUserDefaults] setInteger:voice forKey:kACTimeAnnouncementVoiceKey];
+            [[NSUserDefaults standardUserDefaults] synchronize];
+            break;
+        default:
+            break;
+    }
+}
 
 - (void)setTimeAnnouncementEnabled:(BOOL)timeAnnouncementEnabled {
     if (_timeAnnouncementEnabled != timeAnnouncementEnabled) {

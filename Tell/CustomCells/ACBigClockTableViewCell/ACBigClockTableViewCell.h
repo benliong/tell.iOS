@@ -10,4 +10,6 @@
 
 @interface ACBigClockTableViewCell : UITableViewCell
 @property (nonatomic, assign) IBOutlet UILabel *currentTimeLabel;
+@property (nonatomic, assign) IBOutlet UILabel *ampmLabel;
+@property (nonatomic, assign) IBOutlet UILabel *timeAnnouncementDescriptionLabel;
 @end
