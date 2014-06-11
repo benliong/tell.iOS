@@ -237,8 +237,8 @@
 }
 
 - (BOOL)timeAnnouncementEnabled {
-    BOOL enabled = [[NSUserDefaults standardUserDefaults] boolForKey:kACTimeAnnouncementEnabledKey];
-    return enabled;
+    _timeAnnouncementEnabled = [[NSUserDefaults standardUserDefaults] boolForKey:kACTimeAnnouncementEnabledKey];
+    return _timeAnnouncementEnabled;
 }
 
 - (TimeAnnouncementOption)timeAnnouncementOption {

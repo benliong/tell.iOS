@@ -16,13 +16,14 @@
 
 #define kACTableViewSectionBigClock             0
 #define kACTableViewSectionTimeAnnouncement     1
+#define kACTableViewSectionCredit               2
 #define kACCrossFadeDuration                    1.0
 
 CGFloat const kBlurredImageDefaultBlurRadius            = 20.0;
 CGFloat const kBlurredImageDefaultSaturationDeltaFactor = 1.8;
 CGFloat const kBackgroundDelta                          = 10.0f;
 
-@interface ACClockViewController () <UITableViewDelegate, UITableViewDataSource>
+@interface ACClockViewController () <UITableViewDelegate, UITableViewDataSource, ACSwitchTableViewCellDelegate>
 @property (nonatomic, assign) IBOutlet UIImageView *backgroundImageView;
 @property (nonatomic, assign) IBOutlet UIImageView *blurredBackgroundImageView;
 @property (nonatomic, assign) IBOutlet UITableView *tableView;
@@ -167,7 +168,8 @@ CGFloat const kBackgroundDelta                          = 10.0f;
         case kACTableViewSectionBigClock:
             return 569.0f;
             break;
-            
+        case kACTableViewSectionCredit:
+            return 20.0f;
         default:
             return tableView.rowHeight;
             break;
@@ -177,7 +179,7 @@ CGFloat const kBackgroundDelta                          = 10.0f;
 #pragma mark - UITableViewDataSource
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 2;
+    return 3;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -186,7 +188,15 @@ CGFloat const kBackgroundDelta                          = 10.0f;
             return 1;
             break;
         case kACTableViewSectionTimeAnnouncement:
-            return 4;
+        {
+            if ([[ACAnnouncementManager sharedManager] timeAnnouncementEnabled])
+                return 4;
+            else
+                return 1;
+        }
+            break;
+        case kACTableViewSectionCredit:
+            return 1;
             break;
         default:
             return 0;
@@ -212,10 +222,15 @@ CGFloat const kBackgroundDelta                          = 10.0f;
             return cell;
         } else {
             ACSwitchTableViewCell *cell = (ACSwitchTableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"ACSwitchTableViewCell" forIndexPath:indexPath];
+            cell.delegate = self;
             cell.cellSwitch.on = [[ACAnnouncementManager sharedManager] timeAnnouncementEnabled];
             return cell;
         }
         
+    } else if (indexPath.section == kACTableViewSectionCredit) {
+        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CreditCell" forIndexPath:indexPath];
+        cell.separatorInset = UIEdgeInsetsMake(0, 0, 0, cell.bounds.size.width);
+        return cell;
     }
     return [[UITableViewCell alloc] init];
 }
@@ -239,6 +254,22 @@ CGFloat const kBackgroundDelta                          = 10.0f;
                 completion(nil, error);
         }
     }];
+}
+
+#pragma mark - ACSwitchTableViewCellDelegate
+
+- (void)switchTableViewCell:(ACSwitchTableViewCell *)anACSwitchTableViewCell valueDidChange:(BOOL)isOn {
+    [[ACAnnouncementManager sharedManager] setTimeAnnouncementEnabled:isOn];
+    NSArray *indexPathsArray = [NSArray arrayWithObjects:
+                                                [NSIndexPath indexPathForRow:kACTimeAnnouncementOptionOnTheHour inSection:kACTableViewSectionTimeAnnouncement],
+                                                [NSIndexPath indexPathForRow:kACTimeAnnouncementOptionOnTheHalfHour inSection:kACTableViewSectionTimeAnnouncement],
+                                                [NSIndexPath indexPathForRow:kACTimeAnnouncementOptionOnTheQuarterHour inSection:kACTableViewSectionTimeAnnouncement], nil];
+    if ([[ACAnnouncementManager sharedManager] timeAnnouncementEnabled]) {
+        [self.tableView insertRowsAtIndexPaths:indexPathsArray withRowAnimation:UITableViewRowAnimationAutomatic];
+        [self.tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:kACTableViewSectionCredit] atScrollPosition:UITableViewScrollPositionBottom animated:YES];
+    } else {
+        [self.tableView deleteRowsAtIndexPaths:indexPathsArray withRowAnimation:UITableViewRowAnimationAutomatic];
+    }
 }
 
 #pragma mark - Custom Getters

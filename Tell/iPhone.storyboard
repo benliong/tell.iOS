@@ -129,7 +129,7 @@
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </tableViewCell>
-                                    <tableViewCell appearanceType="aqua" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" textLabel="83I-QI-kab" rowHeight="20" style="IBUITableViewCellStyleDefault" id="HGD-Zy-i8t">
+                                    <tableViewCell appearanceType="aqua" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="CreditCell" textLabel="83I-QI-kab" rowHeight="20" style="IBUITableViewCellStyleDefault" id="HGD-Zy-i8t">
                                         <rect key="frame" x="0.0" y="679" width="320" height="20"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="HGD-Zy-i8t" id="xQs-Nr-qd2">
