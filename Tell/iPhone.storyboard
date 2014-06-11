@@ -32,11 +32,11 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background-sunrise.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="bVe-Hh-fam" userLabel="Image View - Background">
-                                <rect key="frame" x="0.0" y="-20" width="320" height="608"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="578"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
                             <imageView appearanceType="aqua" userInteractionEnabled="NO" alpha="0.10000000000000001" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background-sunrise.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="EIB-3i-3cB" userLabel="Image View - Blurred Background">
-                                <rect key="frame" x="0.0" y="-20" width="320" height="608"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="578"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
                             <tableView appearanceType="aqua" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Wer-wm-czx">
@@ -215,7 +215,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tNC-48-aei" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1064" y="682"/>
+            <point key="canvasLocation" x="1595" y="697"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="41L-l8-WD5">
@@ -230,7 +230,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GRy-NQ-yV1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="530" y="682"/>
+            <point key="canvasLocation" x="1112" y="697"/>
         </scene>
     </scenes>
     <resources>

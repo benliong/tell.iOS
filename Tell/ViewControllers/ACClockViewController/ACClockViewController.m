@@ -20,6 +20,7 @@
 
 CGFloat const kBlurredImageDefaultBlurRadius            = 20.0;
 CGFloat const kBlurredImageDefaultSaturationDeltaFactor = 1.8;
+CGFloat const kBackgroundDelta                          = 10.0f;
 
 @interface ACClockViewController () <UITableViewDelegate, UITableViewDataSource>
 @property (nonatomic, assign) IBOutlet UIImageView *backgroundImageView;
@@ -32,6 +33,8 @@ CGFloat const kBlurredImageDefaultSaturationDeltaFactor = 1.8;
 @property (nonatomic, strong) NSArray *eveningImages;
 @property (nonatomic, strong) NSArray *nightImages;
 @property (nonatomic, assign) NSUInteger flickrDownloadCompletionCount;
+
+@property (nonatomic, strong) NSArray *timeAnnouncementDescriptionsArray;
 @end
 
 @implementation ACClockViewController
@@ -48,6 +51,10 @@ CGFloat const kBlurredImageDefaultSaturationDeltaFactor = 1.8;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+//    self.backgroundImageView.frame = CGRectMake(0.0f, 0.0f, self.view.bounds.size.width, self.view.bounds.size.height + kBackgroundDelta);
+//    self.blurredBackgroundImageView.frame = self.backgroundImageView.frame;
+    
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [self setBackgroundWithImage:[UIImage imageNamed:@"background-night.jpg"]];
     });
@@ -122,14 +129,22 @@ CGFloat const kBlurredImageDefaultSaturationDeltaFactor = 1.8;
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
     float maximumOffset = self.tableView.contentSize.height - self.tableView.bounds.size.height;
     float blurFactor = self.tableView.contentOffset.y / maximumOffset;
-    if (blurFactor > 1.0f)
+    float backgroundDelta = blurFactor;
+    if (blurFactor > 1.0f) {
         blurFactor = 1.0f;
-    if (blurFactor <= 0.0f)
-        blurFactor = 0.1;
+        backgroundDelta = 1.0f;
+    }
+    if (blurFactor <= 0.0f) {
+        blurFactor = 0.1f;
+        backgroundDelta = 0.0f;
+    }
+    
     self.blurredBackgroundImageView.alpha = blurFactor;
-    NSLog(@"maximumOffset = %f", maximumOffset);
-    NSLog(@"contentOffset.y = %f", self.tableView.contentOffset.y);
-    NSLog(@"blurFactor = %f", blurFactor);
+    CGRect oldFrame = self.backgroundImageView.frame;
+    CGRect newFrame = oldFrame;
+    newFrame.origin.y = self.view.frame.origin.y - (backgroundDelta * kBackgroundDelta);
+    self.backgroundImageView.frame = newFrame;
+    self.blurredBackgroundImageView.frame = newFrame;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -140,6 +155,7 @@ CGFloat const kBlurredImageDefaultSaturationDeltaFactor = 1.8;
             TimeAnnouncementOption previousTimeAnnouncementOption = [[ACAnnouncementManager sharedManager] timeAnnouncementOption];
             [[ACAnnouncementManager sharedManager] setTimeAnnouncementOption:selectedTimeAnnouncementOption];
             [tableView reloadRowsAtIndexPaths:[NSArray arrayWithObjects:[NSIndexPath indexPathForRow:previousTimeAnnouncementOption inSection:kACTableViewSectionTimeAnnouncement], indexPath, nil] withRowAnimation:UITableViewRowAnimationAutomatic];
+            
         }
     }
 }
@@ -224,6 +240,9 @@ CGFloat const kBlurredImageDefaultSaturationDeltaFactor = 1.8;
         }
     }];
 }
+
+#pragma mark - Custom Getters
+
 
 #pragma mark -
 
