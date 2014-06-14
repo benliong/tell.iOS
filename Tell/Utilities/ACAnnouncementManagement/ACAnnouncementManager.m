@@ -8,6 +8,7 @@
 
 #import "ACAnnouncementManager.h"
 #import "UISound.h"
+#import <Parse/Parse.h>
 
 @interface ACAnnouncementManager ()
 @property (nonatomic, strong) NSDate *lastScheduledNotificationDate;
@@ -92,7 +93,21 @@
 }
 
 #pragma mark - Scheduling Local Notifications
-
+- (void)reloadAndScheduleTimeAnnouncementNotifications {
+    [self reloadAndScheduleTimeAnnouncementNotificationsWithCompletion:nil];
+}
+- (void)reloadAndScheduleTimeAnnouncementNotificationsWithCompletion:(void (^)(BOOL finished))completion {
+    [self reloadTimeAnnouncementNotificationsWithCompletion:^(BOOL finished) {
+        NSArray *notificationsArray = [[UIApplication sharedApplication] scheduledLocalNotifications];
+        if ([notificationsArray count] - 11 <= 0) {
+            [self scheduleFutureTimeAnnouncementReloadOnDate:[NSDate dateWithTimeIntervalSinceNow:60] completion:completion];
+//            [self scheduleFutureTimeAnnouncementReloadOnDate:[(UILocalNotification *)[notificationsArray objectAtIndex:0] fireDate] completion:completion];
+        } else {
+            [self scheduleFutureTimeAnnouncementReloadOnDate:[NSDate dateWithTimeIntervalSinceNow:60] completion:completion];
+//            [self scheduleFutureTimeAnnouncementReloadOnDate:[(UILocalNotification *)[notificationsArray objectAtIndex:[notificationsArray count] - 11] fireDate] completion:completion];
+        }
+    }];
+}
 - (void)reloadTimeAnnouncementNotifications {
     [self reloadTimeAnnouncementNotificationsWithCompletion:nil];
 }
@@ -288,57 +303,46 @@
                                                           userInfo:[NSDictionary dictionaryWithObjectsAndKeys:
                                                                     [NSNumber numberWithInteger:_timeAnnouncementOption], kACTimeAnnouncementOptionKey,
                                                                     [NSNumber numberWithInteger:oldTimeAnnouncementOption], kACTimeANnouncementOptionOldValueKey, nil]];
-        [self reloadTimeAnnouncementNotifications];
+        [self reloadAndScheduleTimeAnnouncementNotifications];
     }
 }
 
 #pragma mark - Push Notification
 
-- (void)scheduleFutureTimeAnnouncementReload {
-//    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-//    [dateFormatter setDateFormat:@"yyyy-MM-dd'T'HH:mm:ss.SSS"];
-//    
-//    PFInstallation *currentInstallation = [PFInstallation currentInstallation];
-//    NSLog(@"Device Token = %@", [currentInstallation deviceToken]);
-//    NSLog(@"Date = %@", self.lastScheduledNotificationDate);
-//    //
-//    //    PFQuery *devicesFilter = [PFInstallation query];
-//    //    [devicesFilter whereKey:@"deviceToken" containedIn:[NSArray arrayWithObject:[currentInstallation deviceToken]]];
-//    //
-//    //    [PFPush sendPushMessageToQueryInBackground:devicesFilter
-//    //                                   withMessage:@"You have a new todo!"];
-//    
-//    NSMutableURLRequest *urlRequest = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@"https://api.parse.com/1/push"]];
-//    [urlRequest setHTTPMethod:@"POST"];
-//    [urlRequest setValue:@"application/json; charset=utf-8" forHTTPHeaderField:@"Content-Type"];
-//    [urlRequest setValue:@"rZLWR0IcWvwRU6aBkAZxqCyfbYamoH35onufGz49" forHTTPHeaderField:@"X-Parse-Application-Id"];
-//    [urlRequest setValue:@"24J9SiWbHAw328rzncXuYzBYJIrfBEBgyGLYJ6fR" forHTTPHeaderField:@"X-Parse-REST-API-Key"];
-//    
-//    NSMutableDictionary *postDictionary = [[NSMutableDictionary alloc] initWithObjectsAndKeys:
-//                                           [NSDictionary dictionaryWithObjectsAndKeys:
-//                                            [currentInstallation deviceToken], @"deviceToken",
-//                                            //                                            @"ios", @"deviceType",
-//                                            nil],                                                               @"where",
-//                                           [dateFormatter stringFromDate:self.lastScheduledNotificationDate], @"push_time",
-//                                           [NSDictionary dictionaryWithObjectsAndKeys:
-//                                            [NSNumber numberWithBool:YES], @"content-available",
-//                                            [NSNumber numberWithInteger:kACPushNotificationTypeRefresh],            kACPushNotificationType,
-//                                            //
-//                                            //                                            @"test", @"alert",
-//                                            nil],                                                                   @"data",
-//                                           nil];
-//    NSError *error = nil;
-//    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:postDictionary
-//                                                       options:0
-//                                                         error:&error];
-//    //    NSLog(@"Payload size: %lu", (unsigned long)[jsonData length]);
-//    //    NSLog(@"JSON String: %@", [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding]);
-//    [urlRequest setHTTPBody:jsonData];
-//    
-//    [NSURLConnection sendAsynchronousRequest:urlRequest queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
-//        //        NSLog(@"Data Received: %@", [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding]);
-//    }];
+#pragma mark -
+- (void)scheduleFutureTimeAnnouncementReloadOnDate:(NSDate *)scheduledDate {
+    [self scheduleFutureTimeAnnouncementReloadOnDate:scheduledDate completion:nil];
 }
+- (void)scheduleFutureTimeAnnouncementReloadOnDate:(NSDate *)scheduledDate completion:(void (^)(BOOL finished))completion {
+
+    NSDateFormatter *gmtDateFormatter = [[NSDateFormatter alloc] init];
+    gmtDateFormatter.timeZone = [NSTimeZone timeZoneForSecondsFromGMT:0];
+    gmtDateFormatter.dateFormat = @"yyyy-MM-dd~HH:mm:ss";
+
+    NSArray *sortedArrayOfNotifications = [[[UIApplication sharedApplication] scheduledLocalNotifications] sortedArrayUsingDescriptors:[NSArray arrayWithObject:[NSSortDescriptor sortDescriptorWithKey:@"fireDate" ascending:NO]]];
+    UILocalNotification *lastNotification = [sortedArrayOfNotifications firstObject];
+    
+    NSLog(@"First Scheduled Notification: %@", [(UILocalNotification *)[sortedArrayOfNotifications objectAtIndex:0] fireDate]);
+    NSLog(@"Last  Scheduled Notification: %@", [(UILocalNotification *)[sortedArrayOfNotifications lastObject] fireDate]);
+    NSLog(@"Current Date: %@", [NSDate date]);
+
+    NSString *urlString = [NSString stringWithFormat:@"http://pixelicious.com.hk/tellapp/didFinishReloading.php?time_announcement_enabled=1&device_token=%@&last_scheduled_announcement_date=%@", self.deviceToken, [gmtDateFormatter stringFromDate:lastNotification.fireDate]];
+    NSLog(@"urlString = %@", urlString);
+    NSURLRequest *urlRequest = [NSURLRequest requestWithURL:[NSURL URLWithString:urlString]];
+    [NSURLConnection sendAsynchronousRequest:urlRequest queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
+        if (connectionError) {
+            NSLog(@"ConnectionError: %@", [connectionError localizedDescription]);
+            if (completion)
+                completion(NO);
+        } else {
+            NSString *responseString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+            NSLog(@"response: %@", responseString);
+            if (completion)
+                completion(YES);
+        }
+    }];
+}
+
 
 
 @end

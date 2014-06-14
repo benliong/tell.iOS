@@ -38,7 +38,17 @@ typedef enum {
     kACTimeAnnouncementOptionOnTheQuarterHour
 } TimeAnnouncementOption;
 
+#define kACPushNotificationType                             @"type"
+#define kACAppPreviouslyLaunchedKey                         @"kACAppPreviouslyLaunchedKey"
+#define kACMaximumNumberOfTimeAnnouncementNotifications     64
+
+typedef enum {
+    kACPushNotificationTypeRefresh,
+    kACPushNotificationTypeAlarm
+} PushNotificationType;
+
 @interface ACAnnouncementManager : NSObject
+@property (nonatomic, strong) NSString *deviceToken;
 @property (nonatomic, assign) ACVoice voice;
 @property (nonatomic, strong) NSArray *voicePostfixArray;
 @property (nonatomic, assign) BOOL timeAnnouncementEnabled;
@@ -52,11 +62,14 @@ typedef enum {
 - (void)announceDate:(NSDate *)date completion:(void (^)(BOOL finished))completion;
 
 #pragma mark - Scheduling Local Notifications
-
+- (void)reloadAndScheduleTimeAnnouncementNotifications;
+- (void)reloadAndScheduleTimeAnnouncementNotificationsWithCompletion:(void (^)(BOOL finished))completion;
 - (void)reloadTimeAnnouncementNotifications;
 - (void)reloadTimeAnnouncementNotificationsWithCompletion:(void (^)(BOOL finished))completion;
 
 #pragma mark - Push Notification
 
-- (void)scheduleFutureTimeAnnouncementReload;
+- (void)scheduleFutureTimeAnnouncementReloadOnDate:(NSDate *)scheduledDate;
+- (void)scheduleFutureTimeAnnouncementReloadOnDate:(NSDate *)scheduledDate completion:(void (^)(BOOL finished))completion;
+
 @end

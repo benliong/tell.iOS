@@ -8,6 +8,8 @@
 
 #import "ACAppDelegate.h"
 #import "ACAnnouncementManager.h"
+#import <Parse/Parse.h>
+
 #define kACAppPreviouslyLaunchedKey                         @"kACAppPreviouslyLaunchedKey"
 
 @implementation ACAppDelegate
@@ -18,15 +20,19 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    [Parse setApplicationId:@"rZLWR0IcWvwRU6aBkAZxqCyfbYamoH35onufGz49"
+                  clientKey:@"iqzzlHyoq22lBxb1YWI4kbNwECPoX4SdYpQ0F9qQ"];
+    [application registerForRemoteNotificationTypes:UIRemoteNotificationTypeBadge|
+     UIRemoteNotificationTypeAlert|
+     UIRemoteNotificationTypeSound];
+
     if (![[NSUserDefaults standardUserDefaults] boolForKey:kACAppPreviouslyLaunchedKey]) {
         [[ACAnnouncementManager sharedManager] setTimeAnnouncementEnabled:YES];
         [[NSUserDefaults standardUserDefaults] setBool:YES forKey:kACAppPreviouslyLaunchedKey];
         [[NSUserDefaults standardUserDefaults] synchronize];
     }
     
-    [[ACAnnouncementManager sharedManager] reloadTimeAnnouncementNotificationsWithCompletion:^(BOOL finished) {
-        [[ACAnnouncementManager sharedManager] scheduleFutureTimeAnnouncementReload];
-    }];
+    [[ACAnnouncementManager sharedManager] reloadAndScheduleTimeAnnouncementNotifications];
     return YES;
 }
 
@@ -70,6 +76,34 @@
             abort();
         } 
     }
+}
+
+- (void)application:(UIApplication*)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData*)deviceToken
+{
+	NSLog(@"My token is: %@", deviceToken);
+    NSString *dToken = [[deviceToken description] stringByTrimmingCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"<>"]];
+    dToken = [dToken stringByReplacingOccurrencesOfString:@" " withString:@""];
+    [[ACAnnouncementManager sharedManager] setDeviceToken:dToken];
+}
+
+- (void)application:(UIApplication*)application didFailToRegisterForRemoteNotificationsWithError:(NSError*)error
+{
+	NSLog(@"Failed to get token, error: %@", error);
+    [[ACAnnouncementManager sharedManager] setDeviceToken:nil];
+}
+
+- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {
+    
+    NSLog(@"Push Notification Received: %@", userInfo);
+    
+    PushNotificationType pushNotificationType = kACPushNotificationTypeRefresh;
+    if ([userInfo objectForKey:kACPushNotificationType]) {
+        pushNotificationType = (PushNotificationType)[[userInfo objectForKey:kACPushNotificationType] integerValue];
+    }
+
+    [[ACAnnouncementManager sharedManager] reloadAndScheduleTimeAnnouncementNotificationsWithCompletion:^(BOOL finished) {
+        completionHandler(UIBackgroundFetchResultNewData);
+    }];
 }
 
 - (void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification {

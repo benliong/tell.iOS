@@ -68,7 +68,7 @@
 
     UILocalNotification *notification = [self.notificationsArray objectAtIndex:indexPath.row];
     cell.textLabel.text = notification.soundName;
-    cell.detailTextLabel.text = [dateFormatter stringFromDate:notification.fireDate];
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"%@", notification.fireDate];
     
     return cell;
 }
