@@ -56,9 +56,9 @@ CGFloat const kBackgroundDelta                          = 10.0f;
 //    self.backgroundImageView.frame = CGRectMake(0.0f, 0.0f, self.view.bounds.size.width, self.view.bounds.size.height + kBackgroundDelta);
 //    self.blurredBackgroundImageView.frame = self.backgroundImageView.frame;
     
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [self setBackgroundWithImage:[UIImage imageNamed:@"background-night.jpg"]];
-    });
+//    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//        [self setBackgroundWithImage:[UIImage imageNamed:@"background-night.jpg"]];
+//    });
   
     __weak ACClockViewController* sself = self;
     [self getImageFromFlickrForTags:@"dawn" completion:^(NSArray *photoDictionariesArray, NSError *error) {

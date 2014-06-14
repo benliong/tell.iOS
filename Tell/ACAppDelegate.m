@@ -8,7 +8,6 @@
 
 #import "ACAppDelegate.h"
 #import "ACAnnouncementManager.h"
-#import <Parse/Parse.h>
 
 #define kACAppPreviouslyLaunchedKey                         @"kACAppPreviouslyLaunchedKey"
 
@@ -20,8 +19,6 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    [Parse setApplicationId:@"rZLWR0IcWvwRU6aBkAZxqCyfbYamoH35onufGz49"
-                  clientKey:@"iqzzlHyoq22lBxb1YWI4kbNwECPoX4SdYpQ0F9qQ"];
     [application registerForRemoteNotificationTypes:UIRemoteNotificationTypeBadge|
      UIRemoteNotificationTypeAlert|
      UIRemoteNotificationTypeSound];
