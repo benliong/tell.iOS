@@ -9,6 +9,10 @@
 #import "ACAppDelegate.h"
 #import "ACAnnouncementManager.h"
 
+#import "UAirship.h"
+#import "UAConfig.h"
+#import "UAPush.h"
+
 #define kACAppPreviouslyLaunchedKey                         @"kACAppPreviouslyLaunchedKey"
 
 @implementation ACAppDelegate
@@ -19,9 +23,24 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    [application registerForRemoteNotificationTypes:UIRemoteNotificationTypeBadge|
-     UIRemoteNotificationTypeAlert|
-     UIRemoteNotificationTypeSound];
+    // Populate AirshipConfig.plist with your app's info from https://go.urbanairship.com
+    // or set runtime properties here.
+    UAConfig *config = [UAConfig defaultConfig];
+        
+    // Set log level for debugging config loading (optional)
+    // It will be set to the value in the loaded config upon takeOff
+    [UAirship setLogLevel:UALogLevelTrace];
+
+    // Call takeOff (which creates the UAirship singleton)
+    [UAirship takeOff:config];
+    
+    [UAPush shared].notificationTypes = (UIRemoteNotificationTypeBadge |
+                                         UIRemoteNotificationTypeSound |
+                                         UIRemoteNotificationTypeAlert |
+                                         UIRemoteNotificationTypeNewsstandContentAvailability);
+//    [application registerForRemoteNotificationTypes:UIRemoteNotificationTypeBadge|
+//     UIRemoteNotificationTypeAlert|
+//     UIRemoteNotificationTypeSound];
 
     if (![[NSUserDefaults standardUserDefaults] boolForKey:kACAppPreviouslyLaunchedKey]) {
         [[ACAnnouncementManager sharedManager] setTimeAnnouncementEnabled:YES];
@@ -90,8 +109,12 @@
 }
 
 - (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {
-    
+    UA_LINFO(@"Received remote notification (in appDelegate): %@", userInfo);
     NSLog(@"Push Notification Received: %@", userInfo);
+    
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [[ACAnnouncementManager sharedManager] announceSilentNotification];
+    });
     
     PushNotificationType pushNotificationType = kACPushNotificationTypeRefresh;
     if ([userInfo objectForKey:kACPushNotificationType]) {

@@ -60,6 +60,7 @@ typedef enum {
 
 - (void)announceDate:(NSDate *)date;
 - (void)announceDate:(NSDate *)date completion:(void (^)(BOOL finished))completion;
+- (void)announceSilentNotification;
 
 #pragma mark - Scheduling Local Notifications
 - (void)reloadAndScheduleTimeAnnouncementNotifications;

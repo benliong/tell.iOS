@@ -82,6 +82,13 @@
     }];
 }
 
+- (void)announceSilentNotification {
+    NSString *silentPath = [[NSBundle mainBundle] pathForResource:@"silentN" ofType:@"aiff"];
+    UISound *silentSound = [UISound soundWithContentsOfURL:[NSURL fileURLWithPath:silentPath]];
+
+    [silentSound play];
+}
+
 - (NSString *)audioFileNameForDateComponents:(NSDateComponents *)dateComponents voice:(ACVoice)voice includesExtension:(BOOL)includesExtension {
     NSInteger hour = [dateComponents hour];
     if ([dateComponents hour] >= 12 && [dateComponents minute] != 00)

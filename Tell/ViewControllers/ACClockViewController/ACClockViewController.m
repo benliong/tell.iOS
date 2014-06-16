@@ -278,30 +278,34 @@ CGFloat const kBackgroundDelta                          = 10.0f;
 #pragma mark -
 
 - (IBAction)didPressTestButton:(id)sender {
-    NSDateComponents *components = [[NSDateComponents alloc] init];
-    [components setHour:14];
-    [components setMinute:45];
-    NSDate *date = [[NSCalendar currentCalendar] dateFromComponents:components];
-    [[ACAnnouncementManager sharedManager] announceDate:date];
+//    NSDateComponents *components = [[NSDateComponents alloc] init];
+//    [components setHour:14];
+//    [components setMinute:45];
+//    NSDate *date = [[NSCalendar currentCalendar] dateFromComponents:components];
+//    [[ACAnnouncementManager sharedManager] announceDate:date];
+    
+    [[ACAnnouncementManager sharedManager] announceSilentNotification];
 }
 
 - (void)reloadBackground {
-    __weak ACClockViewController* sself = self;
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
-        NSLog(@"Number of night images = %lu", (unsigned long)[sself.nightImages count]);
-        NSUInteger randomIndex = arc4random() % ([sself.nightImages count] - 1);
-        NSLog(@"Random Integer = %lu", (unsigned long)randomIndex);
-        NSDictionary *randomPhotoDictionary = [sself.nightImages objectAtIndex:randomIndex];
-        NSLog(@"randomPhotoDictionary: %@", randomPhotoDictionary);
-        NSURL *url = [[FlickrKit sharedFlickrKit] photoURLForSize:FKPhotoSizeLarge1024 fromPhotoDictionary:randomPhotoDictionary];
-
-        NSError *error = nil;
-        NSData *data = [NSData dataWithContentsOfURL:url options:NSDataReadingUncached error:&error];
-        if (!error && data) {
-            UIImage* image = [[UIImage alloc] initWithData:data];
-            [sself setBackgroundWithImage:image];
-        }
-    });
+    if ([self.nightImages count] > 0) {
+        __weak ACClockViewController* sself = self;
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
+            NSLog(@"Number of night images = %lu", (unsigned long)[sself.nightImages count]);
+            NSUInteger randomIndex = arc4random() % ([sself.nightImages count] - 1);
+            NSLog(@"Random Integer = %lu", (unsigned long)randomIndex);
+            NSDictionary *randomPhotoDictionary = [sself.nightImages objectAtIndex:randomIndex];
+            NSLog(@"randomPhotoDictionary: %@", randomPhotoDictionary);
+            NSURL *url = [[FlickrKit sharedFlickrKit] photoURLForSize:FKPhotoSizeLarge1024 fromPhotoDictionary:randomPhotoDictionary];
+            
+            NSError *error = nil;
+            NSData *data = [NSData dataWithContentsOfURL:url options:NSDataReadingUncached error:&error];
+            if (!error && data) {
+                UIImage* image = [[UIImage alloc] initWithData:data];
+                [sself setBackgroundWithImage:image];
+            }
+        });        
+    }
 }
 
 - (void)setBackgroundWithImage:(UIImage *)image {
