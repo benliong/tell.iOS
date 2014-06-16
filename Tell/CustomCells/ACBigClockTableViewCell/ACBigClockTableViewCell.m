@@ -76,19 +76,43 @@
         case kACTimeAnnouncementOptionOnTheQuarterHour:
         {
             [description appendFormat:@"%@:00, %@:15, %@:45 ...", hourString, hourString, hourString];
-            self.timeAnnouncementDescriptionLabel.text = description;
+            [UIView animateWithDuration:0.5f
+                             animations:^{
+                                 self.timeAnnouncementDescriptionLabel.alpha = 0.0;
+                             } completion:^(BOOL finished) {
+                                 self.timeAnnouncementDescriptionLabel.text = description;
+                                 [UIView animateWithDuration:0.5f animations:^{
+                                     self.timeAnnouncementDescriptionLabel.alpha = 1.0;
+                                 }];
+                             }];
         }
             break;
         case kACTimeAnnouncementOptionOnTheHalfHour:
         {
             [description appendFormat:@"%@:00, %@:30, %ld:30 ...", hourString, hourString, (long)([hourString integerValue]+1)];
-            self.timeAnnouncementDescriptionLabel.text = description;
+            [UIView animateWithDuration:0.5f
+                             animations:^{
+                                 self.timeAnnouncementDescriptionLabel.alpha = 0.0;
+                             } completion:^(BOOL finished) {
+                                 self.timeAnnouncementDescriptionLabel.text = description;
+                                 [UIView animateWithDuration:0.5f animations:^{
+                                     self.timeAnnouncementDescriptionLabel.alpha = 1.0;
+                                 }];
+                             }];
         }
             break;
         case kACTimeAnnouncementOptionOnTheHour:
         {
             [description appendFormat:@"%@:00, %ld:00, %ld:00 ...", hourString, (long)([hourString integerValue]+1), (long)([hourString integerValue]+2)];
-            self.timeAnnouncementDescriptionLabel.text = description;
+            [UIView animateWithDuration:0.5f
+                             animations:^{
+                                 self.timeAnnouncementDescriptionLabel.alpha = 0.0;
+                             } completion:^(BOOL finished) {
+                                 self.timeAnnouncementDescriptionLabel.text = description;
+                                 [UIView animateWithDuration:0.5f animations:^{
+                                     self.timeAnnouncementDescriptionLabel.alpha = 1.0;
+                                 }];
+                             }];
         }
             
         default:
