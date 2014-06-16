@@ -166,7 +166,7 @@ CGFloat const kBackgroundDelta                          = 10.0f;
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     switch (indexPath.section) {
         case kACTableViewSectionBigClock:
-            return 569.0f;
+            return self.tableView.bounds.size.height + 1;
             break;
         case kACTableViewSectionCredit:
             return 20.0f;
