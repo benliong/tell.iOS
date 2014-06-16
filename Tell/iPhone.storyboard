@@ -36,7 +36,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="578"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
-                            <imageView appearanceType="aqua" userInteractionEnabled="NO" alpha="0.10000000000000001" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background-sunrise.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="EIB-3i-3cB" userLabel="Image View - Blurred Background">
+                            <imageView appearanceType="aqua" userInteractionEnabled="NO" alpha="0.10000000000000001" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background-sunrise-blurred.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="EIB-3i-3cB" userLabel="Image View - Blurred Background">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="578"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
@@ -70,10 +70,13 @@
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label appearanceType="aqua" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Announcing time every 15 minutes, at 5:00, 5:15, 5:30, 5:45 ..." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="H2D-RL-N7C">
+                                                <label appearanceType="aqua" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Announcing time every 15 minutes, at 5:00, 5:15, 5:30, 5:45 ..." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="H2D-RL-N7C">
                                                     <rect key="frame" x="20" y="485" width="280" height="50"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.70000000000000007" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="50" id="ocf-ZA-NbV"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
@@ -185,6 +188,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="background-sunrise-blurred.jpg" width="1011" height="568"/>
         <image name="background-sunrise.jpg" width="1011" height="568"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

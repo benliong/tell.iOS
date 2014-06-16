@@ -59,6 +59,21 @@ CGFloat const kBackgroundDelta                          = 10.0f;
 //    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
 //        [self setBackgroundWithImage:[UIImage imageNamed:@"background-night.jpg"]];
 //    });
+    
+//    UIImage *blurredImage = [[UIImage imageNamed:@"background-sunrise.jpg"] applyBlurWithRadius:kBlurredImageDefaultBlurRadius
+//                                                                                    tintColor:nil
+//                                                                        saturationDeltaFactor:kBlurredImageDefaultSaturationDeltaFactor
+//                                                                                    maskImage:nil];
+//    self.blurredBackgroundImageView.image = blurredImage;
+//
+//    NSData *imgData = UIImageJPEGRepresentation(blurredImage, 1); // 1 is compression quality
+//    
+//    // Identify the home directory and file name
+//    NSString  *jpgPath = [NSHomeDirectory() stringByAppendingPathComponent:@"Documents/background-sunrise-blurred.jpg"];
+//    
+//    // Write the file.  Choose YES atomically to enforce an all or none write. Use the NO flag if partially written files are okay which can occur in cases of corruption
+//    [imgData writeToFile:jpgPath atomically:YES];
+
   
     __weak ACClockViewController* sself = self;
     [self getImageFromFlickrForTags:@"dawn" completion:^(NSArray *photoDictionariesArray, NSError *error) {

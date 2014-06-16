@@ -33,6 +33,8 @@
 		DF6E04B7194EB3AD00CD2B31 /* silentN.aiff in Resources */ = {isa = PBXBuildFile; fileRef = DF6E04B6194EB3AD00CD2B31 /* silentN.aiff */; };
 		DF6E04B8194EB3AD00CD2B31 /* silentN.aiff in Resources */ = {isa = PBXBuildFile; fileRef = DF6E04B6194EB3AD00CD2B31 /* silentN.aiff */; };
 		DF6E04B9194EB69500CD2B31 /* libUAirship-4.0.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DF9D1EA5194E93D300091ED2 /* libUAirship-4.0.0.a */; };
+		DF8F9A1F194F066B006F0A2D /* background-sunrise-blurred@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DF8F9A1E194F066B006F0A2D /* background-sunrise-blurred@2x.jpg */; };
+		DF8F9A20194F066B006F0A2D /* background-sunrise-blurred@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DF8F9A1E194F066B006F0A2D /* background-sunrise-blurred@2x.jpg */; };
 		DF9D1D4A194E8FFB00091ED2 /* AirshipConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = DF9D1D49194E8FFB00091ED2 /* AirshipConfig.plist */; };
 		DF9D1D4B194E8FFB00091ED2 /* AirshipConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = DF9D1D49194E8FFB00091ED2 /* AirshipConfig.plist */; };
 		DF9D1EFD194E93D300091ED2 /* libUAirship-4.0.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DF9D1EA5194E93D300091ED2 /* libUAirship-4.0.0.a */; };
@@ -459,6 +461,7 @@
 		DF3D48BC1944843B00B7D15B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		DF3D48BE1944843B00B7D15B /* TellTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TellTests.m; sourceTree = "<group>"; };
 		DF6E04B6194EB3AD00CD2B31 /* silentN.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = silentN.aiff; sourceTree = "<group>"; };
+		DF8F9A1E194F066B006F0A2D /* background-sunrise-blurred@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "background-sunrise-blurred@2x.jpg"; sourceTree = "<group>"; };
 		DF9D1D49194E8FFB00091ED2 /* AirshipConfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = AirshipConfig.plist; sourceTree = "<group>"; };
 		DF9D1E56194E93D200091ED2 /* UANativeBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UANativeBridge.h; sourceTree = "<group>"; };
 		DF9D1E58194E93D200091ED2 /* UALandingPageAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UALandingPageAction.h; sourceTree = "<group>"; };
@@ -986,6 +989,7 @@
 				DFBCCE621944F4CB00011B1E /* background-sunrise@2x.jpg */,
 				DFBCCE631944F4CB00011B1E /* background-afternoon@2x.jpg */,
 				DFBCCE641944F4CB00011B1E /* background-night@2x.jpg */,
+				DF8F9A1E194F066B006F0A2D /* background-sunrise-blurred@2x.jpg */,
 				DFBCCE611944F31200011B1E /* Custom Cell */,
 				DF1589691944AF1700BF3AB0 /* AudioFiles */,
 				DF1589631944A8CB00BF3AB0 /* ViewControllers */,
@@ -1590,6 +1594,7 @@
 				DFB9AD1D1946E40000AAB0A7 /* Its-03.aiff in Resources */,
 				DFB9ACF31946E40000AAB0A7 /* 41.aiff in Resources */,
 				DFBCCE651944F4CB00011B1E /* background-sunrise@2x.jpg in Resources */,
+				DF8F9A1F194F066B006F0A2D /* background-sunrise-blurred@2x.jpg in Resources */,
 				DFB9AEAC1946EB9900AAB0A7 /* 0345-en-samantha-no-am-pm.aiff in Resources */,
 				DFB9ACAD1946E3FF00AAB0A7 /* 06.aiff in Resources */,
 				DFB9AEF81946EB9900AAB0A7 /* 1700-en-samantha-no-am-pm.aiff in Resources */,
@@ -1819,6 +1824,7 @@
 				DFB9AD101946E40000AAB0A7 /* 55.aiff in Resources */,
 				DFB9AEB31946EB9900AAB0A7 /* 0430-en-samantha-no-am-pm.aiff in Resources */,
 				DF9D1F3B194E93D400091ED2 /* middle-detail.png in Resources */,
+				DF8F9A20194F066B006F0A2D /* background-sunrise-blurred@2x.jpg in Resources */,
 				DFB9ACB01946E3FF00AAB0A7 /* 07.aiff in Resources */,
 				DFB9AEAB1946EB9900AAB0A7 /* 0330-en-samantha-no-am-pm.aiff in Resources */,
 				DFB9ACBA1946E3FF00AAB0A7 /* 12.aiff in Resources */,
