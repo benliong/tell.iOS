@@ -112,9 +112,9 @@
     UA_LINFO(@"Received remote notification (in appDelegate): %@", userInfo);
     NSLog(@"Push Notification Received: %@", userInfo);
     
-    dispatch_async(dispatch_get_main_queue(), ^{
-        [[ACAnnouncementManager sharedManager] announceSilentNotification];
-    });
+//    dispatch_async(dispatch_get_main_queue(), ^{
+//        [[ACAnnouncementManager sharedManager] announceSilentNotification];
+//    });
     
     PushNotificationType pushNotificationType = kACPushNotificationTypeRefresh;
     if ([userInfo objectForKey:kACPushNotificationType]) {

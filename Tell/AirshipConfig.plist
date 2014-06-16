@@ -13,6 +13,6 @@
 	<key>developmentAppKey</key>
 	<string>6pC0cIq0Q9Kn3yoMQgYIGw</string>
 	<key>inProduction</key>
-	<true/>
+	<false/>
 </dict>
 </plist>
