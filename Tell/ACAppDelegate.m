@@ -48,7 +48,6 @@
         [[NSUserDefaults standardUserDefaults] synchronize];
     }
     
-    [[ACAnnouncementManager sharedManager] reloadAndScheduleTimeAnnouncementNotifications];
     return YES;
 }
 
@@ -111,10 +110,12 @@
 - (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {
     UA_LINFO(@"Received remote notification (in appDelegate): %@", userInfo);
     NSLog(@"Push Notification Received: %@", userInfo);
-    
-//    dispatch_async(dispatch_get_main_queue(), ^{
-//        [[ACAnnouncementManager sharedManager] announceSilentNotification];
-//    });
+
+#ifdef DEBUG
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [[ACAnnouncementManager sharedManager] announceSilentNotification];
+    });
+#endif
     
     PushNotificationType pushNotificationType = kACPushNotificationTypeRefresh;
     if ([userInfo objectForKey:kACPushNotificationType]) {

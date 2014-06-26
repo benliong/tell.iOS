@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		37A6366F1945E59D007F180C /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = 37A6366E1945E59D007F180C /* UIImage+ImageEffects.m */; };
 		37A636701945E59D007F180C /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = 37A6366E1945E59D007F180C /* UIImage+ImageEffects.m */; };
+		DF13B396195B43C70017C561 /* NSString+URLEncode.m in Sources */ = {isa = PBXBuildFile; fileRef = DF13B395195B43C70017C561 /* NSString+URLEncode.m */; };
+		DF13B397195B43C70017C561 /* NSString+URLEncode.m in Sources */ = {isa = PBXBuildFile; fileRef = DF13B395195B43C70017C561 /* NSString+URLEncode.m */; };
 		DF1589611944978D00BF3AB0 /* UISound.m in Sources */ = {isa = PBXBuildFile; fileRef = DF1589601944978D00BF3AB0 /* UISound.m */; };
 		DF1589621944978D00BF3AB0 /* UISound.m in Sources */ = {isa = PBXBuildFile; fileRef = DF1589601944978D00BF3AB0 /* UISound.m */; };
 		DF1589671944A90100BF3AB0 /* ACLocalNotificationsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF1589661944A90100BF3AB0 /* ACLocalNotificationsViewController.m */; };
@@ -436,6 +438,8 @@
 		37A6366E1945E59D007F180C /* UIImage+ImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageEffects.m"; sourceTree = "<group>"; };
 		77C6557AB4C9441BB3C52740 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		83FF3EBD0F524C8990635639 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		DF13B394195B43C70017C561 /* NSString+URLEncode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+URLEncode.h"; sourceTree = "<group>"; };
+		DF13B395195B43C70017C561 /* NSString+URLEncode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+URLEncode.m"; sourceTree = "<group>"; };
 		DF15895F1944978D00BF3AB0 /* UISound.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UISound.h; path = Utilities/UISound/UISound.h; sourceTree = "<group>"; };
 		DF1589601944978D00BF3AB0 /* UISound.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UISound.m; path = Utilities/UISound/UISound.m; sourceTree = "<group>"; };
 		DF1589651944A90100BF3AB0 /* ACLocalNotificationsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ACLocalNotificationsViewController.h; path = ViewControllers/ACLocalNotificationsViewController/ACLocalNotificationsViewController.h; sourceTree = "<group>"; };
@@ -814,6 +818,16 @@
 			);
 			name = "UIImage (Image Effects)";
 			path = "Categories/UIImage (Image Effects)";
+			sourceTree = "<group>";
+		};
+		DF13B393195B43C70017C561 /* NSString (URLEncode) */ = {
+			isa = PBXGroup;
+			children = (
+				DF13B394195B43C70017C561 /* NSString+URLEncode.h */,
+				DF13B395195B43C70017C561 /* NSString+URLEncode.m */,
+			);
+			name = "NSString (URLEncode)";
+			path = "Categories/NSString (URLEncode)";
 			sourceTree = "<group>";
 		};
 		DF15895E1944972B00BF3AB0 /* UISound */ = {
@@ -1355,6 +1369,7 @@
 		DF9EFD47194501DB0006CA0D /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				DF13B393195B43C70017C561 /* NSString (URLEncode) */,
 				DFA79BF11945FD2700171F6A /* UIImageView (Crossfade) */,
 				37A6366C1945E59D007F180C /* UIImage (Image Effects) */,
 				DF9EFD46194501D00006CA0D /* NSTimer (Blocks) */,
@@ -1950,6 +1965,7 @@
 				DF9D1F04194E93D400091ED2 /* UAInboxMessageListCell.m in Sources */,
 				DF9D1F0A194E93D400091ED2 /* UAInboxNavUI.m in Sources */,
 				DF9D1F2E194E93D400091ED2 /* UAPushSettingsTokenViewController.m in Sources */,
+				DF13B396195B43C70017C561 /* NSString+URLEncode.m in Sources */,
 				DF3D48A61944843A00B7D15B /* ACAppDelegate.m in Sources */,
 				DF9D1F06194E93D400091ED2 /* UAInboxMessageListController.m in Sources */,
 				DF9D1F22194E93D400091ED2 /* UAPushNotificationHandler.m in Sources */,
@@ -1983,6 +1999,7 @@
 				DFA79BF01945F1EF00171F6A /* main.m in Sources */,
 				DF9D1F2D194E93D400091ED2 /* UAPushSettingsTagsViewController.m in Sources */,
 				DF9D1F25194E93D400091ED2 /* UAPushSettingsAddTagViewController.m in Sources */,
+				DF13B397195B43C70017C561 /* NSString+URLEncode.m in Sources */,
 				DF9D1F03194E93D400091ED2 /* UAInboxAlertHandler.m in Sources */,
 				DF9D1F05194E93D400091ED2 /* UAInboxMessageListCell.m in Sources */,
 				DF9D1F09194E93D400091ED2 /* UAInboxMessageViewController.m in Sources */,
@@ -2138,6 +2155,7 @@
 					"$(PROJECT_DIR)/Tell/Airship",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "6EB39C29-9A2C-4EEB-AA3B-FA54E56C8AA2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;

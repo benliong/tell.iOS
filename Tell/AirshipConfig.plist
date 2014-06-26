@@ -3,15 +3,15 @@
 <plist version="1.0">
 <dict>
 	<key>detectProvisioningMode</key>
-	<false/>
+	<true/>
 	<key>productionAppSecret</key>
-	<string>xitwTFPNR7uMq_SIvlXd5Q</string>
+	<string>kjy-Y9ssRkeXj2Bm4Y99UQ</string>
 	<key>productionAppKey</key>
-	<string>RlNINjdNRbOyahhVNOF4Ag</string>
+	<string>OWyfdcFjTXGG8IMm-ywevA</string>
 	<key>developmentAppSecret</key>
-	<string>pCzK9m52ShilUqPtgKXqPw</string>
+	<string>hPy-33V8RzOdFiMywLonbw</string>
 	<key>developmentAppKey</key>
-	<string>6pC0cIq0Q9Kn3yoMQgYIGw</string>
+	<string>qbcgkCrLQNmG7qNNDF9hcA</string>
 	<key>inProduction</key>
 	<true/>
 </dict>

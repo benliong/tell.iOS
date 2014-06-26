@@ -8,6 +8,7 @@
 
 #import "ACAnnouncementManager.h"
 #import "UISound.h"
+#import "NSString+URLEncode.h";
 
 @interface ACAnnouncementManager ()
 @property (nonatomic, strong) NSDate *lastScheduledNotificationDate;
@@ -107,10 +108,8 @@
         NSArray *notificationsArray = [[UIApplication sharedApplication] scheduledLocalNotifications];
         if ([notificationsArray count] - 11 <= 0) {
             [self scheduleFutureTimeAnnouncementReloadOnDate:[NSDate dateWithTimeIntervalSinceNow:60] completion:completion];
-//            [self scheduleFutureTimeAnnouncementReloadOnDate:[(UILocalNotification *)[notificationsArray objectAtIndex:0] fireDate] completion:completion];
         } else {
             [self scheduleFutureTimeAnnouncementReloadOnDate:[NSDate dateWithTimeIntervalSinceNow:60] completion:completion];
-//            [self scheduleFutureTimeAnnouncementReloadOnDate:[(UILocalNotification *)[notificationsArray objectAtIndex:[notificationsArray count] - 11] fireDate] completion:completion];
         }
     }];
 }
@@ -277,6 +276,13 @@
 
 #pragma mark - Custom Setters
 
+- (void)setDeviceToken:(NSString *)deviceToken {
+    if (_deviceToken != deviceToken) {
+        _deviceToken = deviceToken;
+        [self reloadAndScheduleTimeAnnouncementNotifications];
+    }
+}
+
 - (void)setVoice:(ACVoice)voice {
     switch (voice) {
         case kACVoiceFemaleEnglishSamantha:
@@ -294,7 +300,7 @@
         [[NSUserDefaults standardUserDefaults] setBool:_timeAnnouncementEnabled forKey:kACTimeAnnouncementEnabledKey];
         [[NSUserDefaults standardUserDefaults] synchronize];
         [[NSNotificationCenter defaultCenter] postNotificationName:kACTimeAnnouncementEnabledValueDidChangeNotification object:self userInfo:[NSDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithBool:_timeAnnouncementEnabled], kACTimeAnnouncementEnabledKey, nil]];
-        [self reloadTimeAnnouncementNotifications];
+        [self reloadAndScheduleTimeAnnouncementNotifications];
     }
 }
 
@@ -328,11 +334,34 @@
     NSArray *sortedArrayOfNotifications = [[[UIApplication sharedApplication] scheduledLocalNotifications] sortedArrayUsingDescriptors:[NSArray arrayWithObject:[NSSortDescriptor sortDescriptorWithKey:@"fireDate" ascending:NO]]];
     UILocalNotification *lastNotification = [sortedArrayOfNotifications firstObject];
     
-    NSLog(@"First Scheduled Notification: %@", [(UILocalNotification *)[sortedArrayOfNotifications objectAtIndex:0] fireDate]);
-    NSLog(@"Last  Scheduled Notification: %@", [(UILocalNotification *)[sortedArrayOfNotifications lastObject] fireDate]);
-    NSLog(@"Current Date: %@", [NSDate date]);
+    if ([sortedArrayOfNotifications count] > 0) {
+        NSLog(@"First Scheduled Notification: %@", [(UILocalNotification *)[sortedArrayOfNotifications objectAtIndex:0] fireDate]);
+        NSLog(@"Last  Scheduled Notification: %@", [(UILocalNotification *)[sortedArrayOfNotifications lastObject] fireDate]);
+        NSLog(@"Current Date: %@", [NSDate date]);
+    } else {
+        NSLog(@"No Notification Scheduled");
+    }
 
-    NSString *urlString = [NSString stringWithFormat:@"http://pixelicious.com.hk/tellapp/didFinishReloading.php?time_announcement_enabled=1&device_token=%@&last_scheduled_announcement_date=%@", self.deviceToken, [gmtDateFormatter stringFromDate:lastNotification.fireDate]];
+    NSString *testingParameter = @"environment=production";
+#ifdef DEBUG
+    testingParameter = @"environment=sandbox&";
+#endif
+    NSString *versionNumber = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"];
+    NSString *buildNumber = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleVersion"];
+    NSLog(@"VersionNumber = %@", versionNumber);
+    NSLog(@"BuildNumber = %@", buildNumber);
+
+    NSUInteger timeAnnouncementEnabledInteger = 0;
+    NSDate *lastScheduledAnnouncementDate = [NSDate date];
+    if (self.timeAnnouncementEnabled) {
+        timeAnnouncementEnabledInteger = 1;
+        lastScheduledAnnouncementDate = lastNotification.fireDate;
+    }
+    
+    if (!self.deviceToken || [self.deviceToken isEqualToString:@""])
+        return;
+    
+    NSString *urlString = [NSString stringWithFormat:@"http://pixelicious.com.hk/tellapp/didFinishReloading.php?%@time_announcement_enabled=%lu&time_announcement_option=%d&device_token=%@&last_scheduled_announcement_date=%@&version=%@&build=%@", testingParameter, (unsigned long)timeAnnouncementEnabledInteger, (int)self.timeAnnouncementOption, self.deviceToken, [gmtDateFormatter stringFromDate:lastScheduledAnnouncementDate], [versionNumber urlencode], [buildNumber urlencode]];
     NSLog(@"urlString = %@", urlString);
     NSURLRequest *urlRequest = [NSURLRequest requestWithURL:[NSURL URLWithString:urlString]];
     [NSURLConnection sendAsynchronousRequest:urlRequest queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
