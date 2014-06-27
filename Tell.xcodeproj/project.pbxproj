@@ -422,6 +422,8 @@
 		DFBCCE6A1944F4CB00011B1E /* background-night@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DFBCCE641944F4CB00011B1E /* background-night@2x.jpg */; };
 		DFBCCE721944F84900011B1E /* ACBigClockTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DFBCCE711944F84900011B1E /* ACBigClockTableViewCell.m */; };
 		DFBCCE731944F84900011B1E /* ACBigClockTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DFBCCE711944F84900011B1E /* ACBigClockTableViewCell.m */; };
+		DFE8E404195D9DBB00D6F544 /* ACPublicHolidayManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DFE8E403195D9DBB00D6F544 /* ACPublicHolidayManager.m */; };
+		DFE8E405195D9DBB00D6F544 /* ACPublicHolidayManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DFE8E403195D9DBB00D6F544 /* ACPublicHolidayManager.m */; };
 		E842EB59B346434DB829B7DF /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 77C6557AB4C9441BB3C52740 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -773,6 +775,8 @@
 		DFBCCE641944F4CB00011B1E /* background-night@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "background-night@2x.jpg"; sourceTree = "<group>"; };
 		DFBCCE701944F84900011B1E /* ACBigClockTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ACBigClockTableViewCell.h; path = CustomCells/ACBigClockTableViewCell/ACBigClockTableViewCell.h; sourceTree = "<group>"; };
 		DFBCCE711944F84900011B1E /* ACBigClockTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ACBigClockTableViewCell.m; path = CustomCells/ACBigClockTableViewCell/ACBigClockTableViewCell.m; sourceTree = "<group>"; };
+		DFE8E402195D9DBB00D6F544 /* ACPublicHolidayManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACPublicHolidayManager.h; sourceTree = "<group>"; };
+		DFE8E403195D9DBB00D6F544 /* ACPublicHolidayManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACPublicHolidayManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1395,6 +1399,7 @@
 		DFAD6E4C1944953F002DEA7C /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				DFE8E401195D9DBB00D6F544 /* ACPublicHolidayManager */,
 				DF9D1E53194E93D200091ED2 /* Airship */,
 				DF15895E1944972B00BF3AB0 /* UISound */,
 				DFAD6E4D19449549002DEA7C /* ACAnnouncementManager */,
@@ -1502,6 +1507,16 @@
 			children = (
 			);
 			name = iPad;
+			sourceTree = "<group>";
+		};
+		DFE8E401195D9DBB00D6F544 /* ACPublicHolidayManager */ = {
+			isa = PBXGroup;
+			children = (
+				DFE8E402195D9DBB00D6F544 /* ACPublicHolidayManager.h */,
+				DFE8E403195D9DBB00D6F544 /* ACPublicHolidayManager.m */,
+			);
+			name = ACPublicHolidayManager;
+			path = Utilities/ACPublicHolidayManager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -2000,6 +2015,7 @@
 				DF9D1F2A194E93D400091ED2 /* UAPushSettingsSoundsViewController.m in Sources */,
 				DF3D48A21944843A00B7D15B /* main.m in Sources */,
 				DF1589671944A90100BF3AB0 /* ACLocalNotificationsViewController.m in Sources */,
+				DFE8E404195D9DBB00D6F544 /* ACPublicHolidayManager.m in Sources */,
 				DF9D1F2C194E93D400091ED2 /* UAPushSettingsTagsViewController.m in Sources */,
 				DF9D1F32194E93D400091ED2 /* UAPushSettingsViewController.m in Sources */,
 			);
@@ -2024,6 +2040,7 @@
 				DF9D1F1F194E93D400091ED2 /* UAMapPresentationController.m in Sources */,
 				DF9D1F31194E93D400091ED2 /* UAPushSettingsUserInfoViewController.m in Sources */,
 				DF1589621944978D00BF3AB0 /* UISound.m in Sources */,
+				DFE8E405195D9DBB00D6F544 /* ACPublicHolidayManager.m in Sources */,
 				DFA79BF51945FD2700171F6A /* UIImageView+Crossfade.m in Sources */,
 				DF9D1F2F194E93D400091ED2 /* UAPushSettingsTokenViewController.m in Sources */,
 				DF36FC9B19450D7D004F458C /* ACSwitchTableViewCell.m in Sources */,

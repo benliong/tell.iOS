@@ -8,7 +8,7 @@
 
 #import "ACAnnouncementManager.h"
 #import "UISound.h"
-#import "NSString+URLEncode.h";
+#import "NSString+URLEncode.h"
 
 @interface ACAnnouncementManager ()
 @property (nonatomic, strong) NSDate *lastScheduledNotificationDate;

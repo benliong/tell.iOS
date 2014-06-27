@@ -13,6 +13,7 @@
 #import "UIImage+ImageEffects.h"
 #import "UIImageView+Crossfade.h"
 #import <FlickrKit/FlickrKit.h>
+#import "ACPublicHolidayManager.h"
 
 #define kACTableViewSectionBigClock             0
 #define kACTableViewSectionTimeAnnouncement     1
@@ -161,13 +162,16 @@ CGFloat const kBackgroundDelta                          = 10.0f;
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     if (indexPath.section == kACTableViewSectionTimeAnnouncement) {
-    TimeAnnouncementOption selectedTimeAnnouncementOption = (TimeAnnouncementOption)(indexPath.row);
+        TimeAnnouncementOption selectedTimeAnnouncementOption = (TimeAnnouncementOption)(indexPath.row);
         if ([[ACAnnouncementManager sharedManager] timeAnnouncementOption] != selectedTimeAnnouncementOption) {
             TimeAnnouncementOption previousTimeAnnouncementOption = [[ACAnnouncementManager sharedManager] timeAnnouncementOption];
             [[ACAnnouncementManager sharedManager] setTimeAnnouncementOption:selectedTimeAnnouncementOption];
             [tableView reloadRowsAtIndexPaths:[NSArray arrayWithObjects:[NSIndexPath indexPathForRow:previousTimeAnnouncementOption inSection:kACTableViewSectionTimeAnnouncement], indexPath, nil] withRowAnimation:UITableViewRowAnimationAutomatic];
             
         }
+    } else if (indexPath.section == kACTableViewSectionCredit) {
+        [[ACPublicHolidayManager sharedManager] updateSupportedCountriesAsync];
+        
     }
 }
 
