@@ -32,6 +32,8 @@
 		DF3D48B51944843B00B7D15B /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF3D48991944843A00B7D15B /* CoreData.framework */; };
 		DF3D48BD1944843B00B7D15B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DF3D48BB1944843B00B7D15B /* InfoPlist.strings */; };
 		DF3D48BF1944843B00B7D15B /* TellTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DF3D48BE1944843B00B7D15B /* TellTests.m */; };
+		DF5CB2DF195D92BC00C9ED53 /* iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF5CB2DE195D92BC00C9ED53 /* iPad.storyboard */; };
+		DF5CB2E0195D92BC00C9ED53 /* iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF5CB2DE195D92BC00C9ED53 /* iPad.storyboard */; };
 		DF6E04B7194EB3AD00CD2B31 /* silentN.aiff in Resources */ = {isa = PBXBuildFile; fileRef = DF6E04B6194EB3AD00CD2B31 /* silentN.aiff */; };
 		DF6E04B8194EB3AD00CD2B31 /* silentN.aiff in Resources */ = {isa = PBXBuildFile; fileRef = DF6E04B6194EB3AD00CD2B31 /* silentN.aiff */; };
 		DF6E04B9194EB69500CD2B31 /* libUAirship-4.0.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DF9D1EA5194E93D300091ED2 /* libUAirship-4.0.0.a */; };
@@ -464,6 +466,7 @@
 		DF3D48BA1944843B00B7D15B /* TellTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TellTests-Info.plist"; sourceTree = "<group>"; };
 		DF3D48BC1944843B00B7D15B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		DF3D48BE1944843B00B7D15B /* TellTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TellTests.m; sourceTree = "<group>"; };
+		DF5CB2DE195D92BC00C9ED53 /* iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = iPad.storyboard; path = Tell/iPad.storyboard; sourceTree = "<group>"; };
 		DF6E04B6194EB3AD00CD2B31 /* silentN.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = silentN.aiff; sourceTree = "<group>"; };
 		DF8F9A1E194F066B006F0A2D /* background-sunrise-blurred@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "background-sunrise-blurred@2x.jpg"; sourceTree = "<group>"; };
 		DF9D1D49194E8FFB00091ED2 /* AirshipConfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = AirshipConfig.plist; sourceTree = "<group>"; };
@@ -957,6 +960,7 @@
 		DF3D48871944843A00B7D15B = {
 			isa = PBXGroup;
 			children = (
+				DF5CB2DE195D92BC00C9ED53 /* iPad.storyboard */,
 				DFAD6E49194487B8002DEA7C /* iPhone.storyboard */,
 				DF3D489B1944843A00B7D15B /* Tell */,
 				DF3D48B81944843B00B7D15B /* TellTests */,
@@ -999,20 +1003,21 @@
 		DF3D489B1944843A00B7D15B /* Tell */ = {
 			isa = PBXGroup;
 			children = (
-				DF9EFD47194501DB0006CA0D /* Categories */,
-				DFBCCE621944F4CB00011B1E /* background-sunrise@2x.jpg */,
+				DFD002BD195D6B8F00E108FB /* iPad */,
+				DF3D48A41944843A00B7D15B /* ACAppDelegate.h */,
 				DFBCCE631944F4CB00011B1E /* background-afternoon@2x.jpg */,
 				DFBCCE641944F4CB00011B1E /* background-night@2x.jpg */,
 				DF8F9A1E194F066B006F0A2D /* background-sunrise-blurred@2x.jpg */,
-				DFBCCE611944F31200011B1E /* Custom Cell */,
-				DF1589691944AF1700BF3AB0 /* AudioFiles */,
-				DF1589631944A8CB00BF3AB0 /* ViewControllers */,
-				DFAD6E4C1944953F002DEA7C /* Utilities */,
-				DF3D48A41944843A00B7D15B /* ACAppDelegate.h */,
+				DFBCCE621944F4CB00011B1E /* background-sunrise@2x.jpg */,
 				DF3D48A51944843A00B7D15B /* ACAppDelegate.m */,
 				DF3D48AA1944843A00B7D15B /* Images.xcassets */,
-				DF3D48A71944843A00B7D15B /* Tell.xcdatamodeld */,
+				DF1589691944AF1700BF3AB0 /* AudioFiles */,
+				DF9EFD47194501DB0006CA0D /* Categories */,
+				DFBCCE611944F31200011B1E /* Custom Cell */,
 				DF3D489C1944843A00B7D15B /* Supporting Files */,
+				DF3D48A71944843A00B7D15B /* Tell.xcdatamodeld */,
+				DFAD6E4C1944953F002DEA7C /* Utilities */,
+				DF1589631944A8CB00BF3AB0 /* ViewControllers */,
 			);
 			path = Tell;
 			sourceTree = "<group>";
@@ -1492,6 +1497,13 @@
 			name = ACBigClockTableViewCell;
 			sourceTree = "<group>";
 		};
+		DFD002BD195D6B8F00E108FB /* iPad */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = iPad;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1725,6 +1737,7 @@
 				DFBCCE691944F4CB00011B1E /* background-night@2x.jpg in Resources */,
 				DFB9ACDD1946E3FF00AAB0A7 /* 30.aiff in Resources */,
 				DF9D1F54194E93D400091ED2 /* UAPushSettingsTokenView.xib in Resources */,
+				DF5CB2DF195D92BC00C9ED53 /* iPad.storyboard in Resources */,
 				DFB9AD1B1946E40000AAB0A7 /* Its-02.aiff in Resources */,
 				DFB9ACC71946E3FF00AAB0A7 /* 19.aiff in Resources */,
 				DFB9ACB11946E3FF00AAB0A7 /* 08.aiff in Resources */,
@@ -1856,6 +1869,7 @@
 				DF9D1F4B194E93D400091ED2 /* UAPushSettingsAddTagViewController.xib in Resources */,
 				DF9D1F4F194E93D400091ED2 /* UAPushSettingsChannelInfoViewController.xib in Resources */,
 				DFB9ACFA1946E40000AAB0A7 /* 44.aiff in Resources */,
+				DF5CB2E0195D92BC00C9ED53 /* iPad.storyboard in Resources */,
 				DFB9AEC51946EB9900AAB0A7 /* 0645-en-samantha-no-am-pm.aiff in Resources */,
 				DF9D1F39194E93D400091ED2 /* bottom-detail@2x.png in Resources */,
 				DFB9ACA61946E3FF00AAB0A7 /* 02.aiff in Resources */,
@@ -2150,12 +2164,14 @@
 					"Airship/**",
 				);
 				INFOPLIST_FILE = "Tell/Tell-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Tell/Airship",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "6EB39C29-9A2C-4EEB-AA3B-FA54E56C8AA2";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -2175,11 +2191,13 @@
 					"Airship/**",
 				);
 				INFOPLIST_FILE = "Tell/Tell-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Tell/Airship",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

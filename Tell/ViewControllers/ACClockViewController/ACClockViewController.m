@@ -36,6 +36,11 @@ CGFloat const kBackgroundDelta                          = 10.0f;
 @property (nonatomic, assign) NSUInteger flickrDownloadCompletionCount;
 
 @property (nonatomic, strong) NSArray *timeAnnouncementDescriptionsArray;
+
+@property (nonatomic, assign) IBOutlet NSLayoutConstraint *backgroundHeightConstraint;
+@property (nonatomic, assign) IBOutlet NSLayoutConstraint *backgroundTopConstratraint;
+@property (nonatomic, assign) IBOutlet NSLayoutConstraint *blurredBackgroundHeightConstraint;
+@property (nonatomic, assign) IBOutlet NSLayoutConstraint *blurredBackgroundTopConstraint;
 @end
 
 @implementation ACClockViewController
@@ -53,27 +58,10 @@ CGFloat const kBackgroundDelta                          = 10.0f;
 {
     [super viewDidLoad];
     
-//    self.backgroundImageView.frame = CGRectMake(0.0f, 0.0f, self.view.bounds.size.width, self.view.bounds.size.height + kBackgroundDelta);
-//    self.blurredBackgroundImageView.frame = self.backgroundImageView.frame;
-    
-//    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-//        [self setBackgroundWithImage:[UIImage imageNamed:@"background-night.jpg"]];
-//    });
-    
-//    UIImage *blurredImage = [[UIImage imageNamed:@"background-sunrise.jpg"] applyBlurWithRadius:kBlurredImageDefaultBlurRadius
-//                                                                                    tintColor:nil
-//                                                                        saturationDeltaFactor:kBlurredImageDefaultSaturationDeltaFactor
-//                                                                                    maskImage:nil];
-//    self.blurredBackgroundImageView.image = blurredImage;
-//
-//    NSData *imgData = UIImageJPEGRepresentation(blurredImage, 1); // 1 is compression quality
-//    
-//    // Identify the home directory and file name
-//    NSString  *jpgPath = [NSHomeDirectory() stringByAppendingPathComponent:@"Documents/background-sunrise-blurred.jpg"];
-//    
-//    // Write the file.  Choose YES atomically to enforce an all or none write. Use the NO flag if partially written files are okay which can occur in cases of corruption
-//    [imgData writeToFile:jpgPath atomically:YES];
-
+    self.backgroundHeightConstraint.constant = self.view.bounds.size.height + kBackgroundDelta;
+    self.blurredBackgroundHeightConstraint.constant = self.view.bounds.size.height + kBackgroundDelta;
+    [self.backgroundImageView layoutIfNeeded];
+    [self.blurredBackgroundImageView layoutIfNeeded];
   
     __weak ACClockViewController* sself = self;
     [self getImageFromFlickrForTags:@"dawn" completion:^(NSArray *photoDictionariesArray, NSError *error) {
@@ -156,11 +144,18 @@ CGFloat const kBackgroundDelta                          = 10.0f;
     }
     
     self.blurredBackgroundImageView.alpha = blurFactor;
-    CGRect oldFrame = self.backgroundImageView.frame;
-    CGRect newFrame = oldFrame;
-    newFrame.origin.y = self.view.frame.origin.y - (backgroundDelta * kBackgroundDelta);
-    self.backgroundImageView.frame = newFrame;
-    self.blurredBackgroundImageView.frame = newFrame;
+    self.backgroundTopConstratraint.constant = backgroundDelta * kBackgroundDelta * -1;
+    self.blurredBackgroundTopConstraint.constant = backgroundDelta * kBackgroundDelta * -1;
+    
+    [self.backgroundImageView layoutIfNeeded];
+    [self.blurredBackgroundImageView layoutIfNeeded];
+
+// This is the old way of animating.  We're moving towards animating the constraint
+//    CGRect oldFrame = self.backgroundImageView.frame;
+//    CGRect newFrame = oldFrame;
+//    newFrame.origin.y = self.view.frame.origin.y - (backgroundDelta * kBackgroundDelta);
+//    self.backgroundImageView.frame = newFrame;
+//    self.blurredBackgroundImageView.frame = newFrame;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -222,6 +217,7 @@ CGFloat const kBackgroundDelta                          = 10.0f;
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.section == kACTableViewSectionBigClock) {
         ACBigClockTableViewCell *cell = (ACBigClockTableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"ACBigClockTableViewCell" forIndexPath:indexPath];
+        cell.backgroundColor = [UIColor clearColor];
         return cell;
     } else if (indexPath.section == kACTableViewSectionTimeAnnouncement) {
         if (indexPath.row == kACTimeAnnouncementOptionOnTheHour ||
@@ -234,17 +230,20 @@ CGFloat const kBackgroundDelta                          = 10.0f;
             } else {
                 cell.accessoryType = UITableViewCellAccessoryNone;
             }
+            cell.backgroundColor = [UIColor clearColor];
             return cell;
         } else {
             ACSwitchTableViewCell *cell = (ACSwitchTableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"ACSwitchTableViewCell" forIndexPath:indexPath];
             cell.delegate = self;
             cell.cellSwitch.on = [[ACAnnouncementManager sharedManager] timeAnnouncementEnabled];
+            cell.backgroundColor = [UIColor clearColor];
             return cell;
         }
         
     } else if (indexPath.section == kACTableViewSectionCredit) {
         UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CreditCell" forIndexPath:indexPath];
         cell.separatorInset = UIEdgeInsetsMake(0, 0, 0, cell.bounds.size.width);
+        cell.backgroundColor = [UIColor clearColor];
         return cell;
     }
     return [[UITableViewCell alloc] init];
